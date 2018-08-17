@@ -1,0 +1,25 @@
+{
+  "name": "mallvv",
+  "version": "1.0.0",
+  "description": "this is a individual event by louiebb",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiebb/mallvv.git"
+  },
+  "author": "louiebb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiebb/mallvv/issues"
+  },
+  "homepage": "https://github.com/louiebb/mallvv#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

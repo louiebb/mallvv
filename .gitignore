@@ -1,0 +1,10 @@
+#过滤目录
+node_modules/
+#过滤某些类型文件
+
+*.zip
+*.rar
+*.7z
+*.exe
+*.wmv
+*.mp4
