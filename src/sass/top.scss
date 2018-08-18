@@ -30,7 +30,7 @@
     span{padding-left: 5px; padding-right: 16px;position: relative;}
     .province{
         position: absolute;
-        width: 260px;
+        width: 230px;
         height: 308px;
         border: 1px solid #DDDED6;
         left: 0;
@@ -42,10 +42,15 @@
             float: left;
             padding: 0px 8px;
             line-height: 20px;
+            margin-right: 2px;
         }
         li.active{
             background: #F9AD00;
             color: #fff;
+        }
+        li:hover {
+            background: #C3BCC3;
+            cursor:pointer;
         }
     }
     &:hover div{

@@ -10,11 +10,13 @@
 
 .pub-top-left span { padding-left: 5px; padding-right: 16px; position: relative; }
 
-.pub-top-left .province { position: absolute; width: 260px; height: 308px; border: 1px solid #DDDED6; left: 0; top: 30px; padding: 12px 28px 0 12px; display: none; }
+.pub-top-left .province { position: absolute; width: 230px; height: 308px; border: 1px solid #DDDED6; left: 0; top: 30px; padding: 12px 28px 0 12px; display: none; }
 
-.pub-top-left .province li { font-size: 12px; float: left; padding: 0px 8px; line-height: 20px; }
+.pub-top-left .province li { font-size: 12px; float: left; padding: 0px 8px; line-height: 20px; margin-right: 2px; }
 
 .pub-top-left .province li.active { background: #F9AD00; color: #fff; }
+
+.pub-top-left .province li:hover { background: #C3BCC3; cursor: pointer; }
 
 .pub-top-left:hover div { border-left: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #fff; background: #fff; padding-left: 10px; z-index: 2; }
 
