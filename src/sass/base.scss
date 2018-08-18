@@ -1,0 +1,46 @@
+//引入变量
+@import 'var';
+
+/*添加公共样式*/
+/*内容、版心 提取 */
+body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:$mainFontColor;
+    background:#fff;
+}
+.container {  
+    width:$container;
+    margin:0 auto;
+}
+.fl {
+    float:$fl;
+}
+.fr {
+    float:$fr;
+}
+.ac {
+    text-align:$textaligin;
+}
+.hide {
+    display:$hide;
+}
+.show{
+    display: $show ;
+}
+.f12{ font-size: $fontSize12;}
+.f14{ font-size: $fontSize14;}
+.f16{ font-size: $fontSize;}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow: hidden;
+    visibility: hidden;
+    zoom: 1; 
+}
+
+.tipcolor{
+    color: $tipcolor;
+}

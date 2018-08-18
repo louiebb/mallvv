@@ -16,18 +16,4 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:1em;}  /*设置h标签的大小�
 i,em{font-style:normal;text-decoration:none;}
 
 
-/*2.添加公共样式*/
-/*body {
-    font:12px Arial,Verdana,"\5b8b\4f53";
-    color:#666;
-    background:#fff;
-}*/
-.clearfix::after{
-    content:"";
-    display:block;
-    height:0;
-    clear:both;
-    overflow: hidden;
-    visibility: hidden;
-    zoom: 1; 
-}
+

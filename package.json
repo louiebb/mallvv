@@ -1,13 +1,13 @@
 {
   "name": "mallvv",
   "version": "1.0.0",
-  "description": "this is a individual event by louiebb",
-  "main": "index.js",
+  "description": "this a project by louiebb",
+  "main": "gulpfile.js",
   "directories": {
     "doc": "doc"
   },
   "scripts": {
-    "test": "null"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,15 @@
   },
   "homepage": "https://github.com/louiebb/mallvv#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "babel-core": "^6.26.3",
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "pump": "^3.0.0"
   }
 }

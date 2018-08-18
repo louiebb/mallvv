@@ -1,0 +1,94 @@
+/* 头部样式 */
+@import 'var';
+.public-top-layout{
+    .container{
+        height: 30px;
+        background: #FAFAFA;
+        border-bottom: 1px solid #F0F0F0;
+        font-size: 13px;
+        line-height: 30px;
+        .more::after{
+            content: "";
+            display: block;
+            height: 3px;
+            width: 6px;
+            position: absolute;
+            top: 50%;
+            right: 6px;
+            margin-top: -2px;
+            background: url(../img/top/top_bg.png) no-repeat;
+        }
+    }
+}
+.pub-top-left{
+    position: relative;
+    div{
+        position: relative;
+        padding-left: 11px;
+        z-index: 10;
+    }
+    span{padding-left: 5px; padding-right: 16px;position: relative;}
+    .province{
+        position: absolute;
+        width: 260px;
+        height: 308px;
+        border: 1px solid #DDDED6;
+        left: 0;
+        top:$pub_nav_h;
+        padding: 12px 28px 0 12px;
+        display: none;
+        li{
+            font-size: 12px;
+            float: left;
+            padding: 0px 8px;
+            line-height: 20px;
+        }
+        li.active{
+            background: #F9AD00;
+            color: #fff;
+        }
+    }
+    &:hover div{
+        border-left: 1px solid #DDDDDD;
+        border-right: 1px solid #DDDDDD;
+        border-bottom: 1px solid #fff;
+        background: #fff;
+        padding-left: 10px;
+        z-index: 2;
+    }
+    &:hover .province{
+        display: block;
+        z-index: 1;
+    }
+}
+.pub-top-right{
+    dt,dl{
+        float: $fl;
+    }
+    dt{
+        .mallvv{
+            margin: 0 4px;
+            color: #333333;
+        }
+        .login,.register{
+            margin-right: 10px;
+        }
+        .register{
+            color: #333333;
+        }
+    }
+    dl{
+        position: relative;
+        a{
+            padding: 0 20px 0 13px;
+            border-right: 1px solid #C3BCC3;
+            color: $mainFontColor;
+        }
+        
+        &:last-child{
+            a{
+                border-right: 0;
+            }
+        } 
+    }
+}

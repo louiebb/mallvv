@@ -1,24 +1,26 @@
-/*书写页面公共部分的代码 */
-/*公共类*/
-.container {  /*内容、版心 提取 */
-    width: 980px;
-    margin:0 auto;
-}
-.fl {
-    float:left;
-}
-.fr {
-    float:right;
-}
-.ac {
-    text-align:center;
-}
-.hide {
-    display:none;
-}
-.show{
-    display: block;
-}
-.f12{ font-size: 12px;}
-.f14{ font-size: 14px;}
-.f16{ font-size: 16px;}
+@charset "UTF-8";
+/*添加公共样式*/
+/*内容、版心 提取 */
+body { font: 12px Arial,Verdana,"\5b8b\4f53"; color: #777; background: #fff; }
+
+.container { width: 1200px; margin: 0 auto; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.ac { text-align: center; }
+
+.hide { display: none; }
+
+.show { display: block; }
+
+.f12 { font-size: 12px; }
+
+.f14 { font-size: 14px; }
+
+.f16 { font-size: 16px; }
+
+.clearfix::after { content: ""; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; zoom: 1; }
+
+.tipcolor { color: #FFA500; }

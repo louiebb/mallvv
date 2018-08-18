@@ -1,1 +1,35 @@
+@charset "UTF-8";
 /* 头部样式 */
+.public-top-layout .container { height: 30px; background: #FAFAFA; border-bottom: 1px solid #F0F0F0; font-size: 13px; line-height: 30px; }
+
+.public-top-layout .container .more::after { content: ""; display: block; height: 3px; width: 6px; position: absolute; top: 50%; right: 6px; margin-top: -2px; background: url(../img/top/top_bg.png) no-repeat; }
+
+.pub-top-left { position: relative; }
+
+.pub-top-left div { position: relative; padding-left: 11px; z-index: 10; }
+
+.pub-top-left span { padding-left: 5px; padding-right: 16px; position: relative; }
+
+.pub-top-left .province { position: absolute; width: 260px; height: 308px; border: 1px solid #DDDED6; left: 0; top: 30px; padding: 12px 28px 0 12px; display: none; }
+
+.pub-top-left .province li { font-size: 12px; float: left; padding: 0px 8px; line-height: 20px; }
+
+.pub-top-left .province li.active { background: #F9AD00; color: #fff; }
+
+.pub-top-left:hover div { border-left: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #fff; background: #fff; padding-left: 10px; z-index: 2; }
+
+.pub-top-left:hover .province { display: block; z-index: 1; }
+
+.pub-top-right dt, .pub-top-right dl { float: left; }
+
+.pub-top-right dt .mallvv { margin: 0 4px; color: #333333; }
+
+.pub-top-right dt .login, .pub-top-right dt .register { margin-right: 10px; }
+
+.pub-top-right dt .register { color: #333333; }
+
+.pub-top-right dl { position: relative; }
+
+.pub-top-right dl a { padding: 0 20px 0 13px; border-right: 1px solid #C3BCC3; color: #777; }
+
+.pub-top-right dl:last-child a { border-right: 0; }
