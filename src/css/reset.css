@@ -15,5 +15,5 @@ a {text-decoration:none; }
 h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:1em;}  /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
 i,em{font-style:normal;text-decoration:none;}
 
-
+button{padding: 0;border: 0;}
 
