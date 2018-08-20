@@ -431,23 +431,32 @@ $pub_nav_h:30px;
             }
             .pub-rec-menu{
                 position: absolute;
-                background: #000000;
+                background: #2B2B2B;
                 .pub-menu-list{
-                    padding: 6px 21px 0 15px;
+                    padding: 0px 21px 8px 15px;
                     width: 176px;
+                    background: url(../img/top/category-line.jpg) 0px bottom repeat-x ;
                     div{
-                        color: $highcolor;
-                        line-height: 22px;
-                       
+                        a{
+                            color: $highcolor;
+                            line-height: 33px;
+                        }
                     }
                     ul{
-                        display: flex;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
+                        position: relative;
                         li{
+                            float: left;
+                            display: block;
+                            height: 24px;
+                            line-height: 24px;
+                            padding-right: 3px;
+                            clear: none;
+                            white-space: nowrap;
                             a{
-                                line-height: 36px;
                                 color: #fff;
+                                &:hover{
+                                    color: $highcolor;
+                                }
                             }
                         }
                     }
@@ -473,6 +482,7 @@ $pub_nav_h:30px;
                 }
             }
             .pub-nav-second{
+                display: none;
                 position: absolute;
                 left: 0;
                 top: 36px;
@@ -512,6 +522,11 @@ $pub_nav_h:30px;
                                     white-space: nowrap;
                                     line-height: 24px;
                                     color: #929292;
+                                    border-bottom: 0;
+                                    &:hover{
+                                        background: $highcolor;
+                                        color: #fff;
+                                    }
                                 }
                             }
                         }

@@ -1,0 +1,92 @@
+@import 'var';
+.pub-footer{
+    border-top: 5px solid #ccc;
+    .pub-footer-top{
+        .same{
+            height: 147px;
+            float: left;
+            margin: 30px 0;
+            h5{
+                font-size: 16px;
+                padding-top: 3px;
+            }
+        }
+        .pub-footer-left{
+            width: 250px;
+            color: #000000;
+            h5{
+                margin-bottom: 20px;
+            }
+            .tel{
+                img{
+                    display: block;
+                    height: 71px;
+                    width: 71px; 
+                    margin-right: 9px;
+
+                }
+                p{
+                    font-size: 17px;
+                    color: $highcolor;
+                    margin-bottom: 14px;
+                }
+            }
+           
+        }
+        .pub-footer-center{
+            width: 688px;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            dl{
+                float: left;
+                width: 20%;
+                dt,dd{
+                    padding-left: 25px;
+                }
+                dt{
+                    color: #666666;
+                    h5{
+                        margin-bottom: 9px;
+                    }
+                }
+                dd{
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+            }
+
+        }
+        .pub-footer-right{
+            width: 255px;
+            padding-left: 5px;
+            div{ 
+                float: left;
+                margin-left: 25px;
+                img{
+                    display: block;
+                    width: 84px;
+                    height: 75px;
+                }
+                p.top{
+                    padding-top: 4px;
+                    padding-left: 4px;
+                    height: 27px;
+                }
+                p.bottom{
+                    line-height: 41px;
+                }
+            }
+
+        }
+    }
+    .pub-footer-bottom{
+        height: 66px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        p{
+            color: #666;
+            word-spacing: 5px;
+            padding: 10px 0;
+        }
+    }
+}
