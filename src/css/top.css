@@ -114,12 +114,70 @@
 
 .pub-header-center .container .pub-search-warp .search-hot .hot { color: #FFA500; }
 
-.pub-header-center .container .mycart { width: 147px; height: 42px; background: #FAFAFA; border: 1px solid #ccc; line-height: 42px; padding-left: 40px; box-sizing: border-box; margin-top: 23px; position: relative; }
+.pub-header-center .container .pub-mycart { position: relative; margin-top: 23px; }
 
-.pub-header-center .container .mycart::before { content: ""; display: block; height: 17px; width: 26px; position: absolute; top: 50%; margin-top: -9px; left: 10px; background: url(../img/top/top_bg.png) no-repeat -120px 0; }
+.pub-header-center .container .pub-mycart span.pub-cart-nam { display: block; width: 147px; height: 42px; background: #FAFAFA; border: 1px solid #ccc; line-height: 42px; padding-left: 40px; box-sizing: border-box; position: relative; }
 
-.pub-header-center .container .mycart::after { content: ""; position: relative; font-size: 0px; line-height: 0; vertical-align: middle; display: inline-block; width: 0px; height: 0px; margin-left: 8px; border-width: 4px; border-color: #777 transparent transparent transparent; border-style: solid dashed dashed dashed; transition: all .3s ease; }
+.pub-header-center .container .pub-mycart span.pub-cart-nam::before { content: ""; display: block; height: 17px; width: 26px; position: absolute; top: 50%; margin-top: -9px; left: 10px; background: url(../img/top/top_bg.png) no-repeat -120px 0; }
 
-.pub-header-center .container .mycart:hover { background: #fff; border-bottom-color: #fff; }
+.pub-header-center .container .pub-mycart span.pub-cart-nam::after { content: ""; position: relative; font-size: 0px; line-height: 0; vertical-align: middle; display: inline-block; width: 0px; height: 0px; margin-left: 8px; border-width: 4px; border-color: #777 transparent transparent transparent; border-style: solid dashed dashed dashed; transition: all .3s ease; }
 
-.pub-header-center .container .mycart:hover::after { transform: rotateZ(180deg); }
+.pub-header-center .container .pub-mycart span.pub-cart-nam:hover { background: #fff; border-bottom-color: #fff; z-index: 33; }
+
+.pub-header-center .container .pub-mycart span.pub-cart-nam:hover::after { transform: rotateZ(180deg); }
+
+.pub-header-center .container .pub-mycart .pub-cart-val { background: #fff; position: absolute; width: 350px; height: 151px; box-sizing: border-box; border: 1px solid #ccc; top: 40px; right: 0px; z-index: 30; display: none; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-title { line-height: 28px; height: 28px; padding: 7px; border-bottom: solid 1px #DDD; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-title h4 { font-weight: bold; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-list { min-height: 58px; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-list span { display: block; line-height: 58px; text-align: center; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-balance { background-color: #F0F0F0; text-align: right; padding: 8px; overflow: hidden; }
+
+.pub-header-center .container .pub-mycart .pub-cart-val .pub-cart-balance a { float: right; clear: both; line-height: 20px; color: #FFF; background-color: #ffa500; padding: 4px 8px; margin-top: 4px; border-radius: 4px; }
+
+.pub-header-center .container .pub-mycart:hover .pub-cart-val { display: block; }
+
+.pub-header-bottom { border-bottom: 2px solid #000; }
+
+.pub-header-bottom .container .pub-recommend { position: relative; }
+
+.pub-header-bottom .container .pub-recommend span { display: inline-block; width: 212px; background: #FFA500; color: #fff; height: 36px; line-height: 36px; font-size: 14px; position: relative; padding-left: 36px; box-sizing: border-box; }
+
+.pub-header-bottom .container .pub-recommend span::before { content: ''; display: block; width: 18px; height: 14px; position: absolute; top: 50%; transform: translateY(-50%); left: 10px; background: url(../img/top/top_bg.png) no-repeat -182px -186px; }
+
+.pub-header-bottom .container .pub-recommend .pub-rec-menu { position: absolute; background: #000000; }
+
+.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list { padding: 6px 21px 0 15px; width: 176px; }
+
+.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list div { color: #FFA500; line-height: 22px; }
+
+.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list ul { display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list ul li a { line-height: 36px; color: #fff; }
+
+.pub-header-bottom .container .pub-nav { position: relative; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-first { width: 988px; background: url(../img/top/nav-right.png) no-repeat right center; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-first li { float: left; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-first li a { display: inline-block; padding: 8px 18px; font-size: 16px; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-first li a:hover { color: #FFA500; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second { position: absolute; left: 0; top: 36px; z-index: 999; overflow: hidden; width: 988px; padding: 10px 0; border-top: 2px solid #000; background: #fff; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap { float: left; width: 300px; margin: 0 10px; overflow: hidden; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap a { display: block; line-height: 30px; border-bottom: 1px solid #eee; text-decoration: none; white-space: nowrap; font-weight: 700; color: #333; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap ul { padding: 5px 0; line-height: 1.8; overflow: hidden; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap ul li { float: left; line-height: 1.2; color: #929292; }
+
+.pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap ul li a { font-weight: 500; display: inline-block; padding: 0 10px; white-space: nowrap; line-height: 24px; color: #929292; }

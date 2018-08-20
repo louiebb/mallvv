@@ -8,6 +8,7 @@ var vvtop = {
     server:'.pub-server',
     follow:'.pub-followus',
     pubtopright:'.pub-top-right',
+    pubrecmenu:'.pub-rec-menu',
     init(){
         this.currentpro = $(this.currentpro);
         this.province = $(this.province);
@@ -18,6 +19,7 @@ var vvtop = {
         this.server = $(this.server);
         this.follow = $(this.follow);
         this.pubtopright = $(this.pubtopright);
+        this.pubrecmenu = $(this.pubrecmenu);
         this.initProvince(this);
         this.initPubNav(this);
 
@@ -65,7 +67,7 @@ var vvtop = {
             self.initnavVal($(this).children('div').attr('data-id'),$(this).children('ul'));
         });
     },
-    initnavVal(navid,ul){
+    initnavVal(navid,ele){
         let navValPro = new Promise((re,rc)=>{
             $.ajax({
                 url:'../api/getnavValue.php?id='+navid,
@@ -83,7 +85,23 @@ var vvtop = {
                             <p>${data[1].value}</p>
                             <img src="../img/top/${data[2].value}"/>`;
             }
-            ul.html(content);
+            ele.html(content);
+        });
+    },
+    initRecommend(self){
+        $.ajax({
+            url:'../api/getdata.php?sql=select id,title,contetn from t_recommend',
+            success:function(txt){
+                if(txt){
+                    var content = JSON.parse(txt).map(x=>`<li>${x.name}</li>`);
+                    self.province.html(content).on('click','li',function(e){
+                        var $lis = $(this).siblings('li');
+                        $lis.removeClass('active');
+                        this.classList.add('active');
+                        self.currentpro.text(this.innerText);
+                    });
+                }
+            }
         });
     }
 }
