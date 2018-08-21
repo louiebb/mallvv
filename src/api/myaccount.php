@@ -5,5 +5,7 @@
     $sql = "select account from myaccount";
     $result = $mydb->query($sql);
     var_dump($result);
+     //关闭连接
+     $mydb->close();
 
 ?>

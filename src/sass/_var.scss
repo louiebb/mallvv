@@ -17,3 +17,11 @@ $hide:none;
 $mainBGCColor:#fff;
 $highcolor:#FFA500;
 $mainFontColor:#777;
+
+@mixin after($w:0px,$h:0){
+    position: absolute;
+    content: '';
+    display: block;
+    height: $h,;
+    width: $w;
+}

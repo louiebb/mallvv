@@ -1,0 +1,9 @@
+require.config({
+    //配置别名
+    paths:{
+        jquery:'jquery-3.2.1'
+    },
+    shim:{
+        top:['jquery']
+    }
+})

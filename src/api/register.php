@@ -12,4 +12,6 @@
     $result = $mydb->query($sql);
 
     echo $result?'success':'fail';
+     //关闭连接
+     $mydb->close();
 ?>                                                     

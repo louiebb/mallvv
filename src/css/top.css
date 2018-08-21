@@ -24,7 +24,7 @@
 
 .pub-header-top .container .pub-top-left:hover div { border-left: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #fff; background: #fff; padding-left: 10px; z-index: 2; }
 
-.pub-header-top .container .pub-top-left:hover .province { display: block; background: #fff; z-index: 1; }
+.pub-header-top .container .pub-top-left:hover .province { display: block; background: #fff; z-index: 12; }
 
 .pub-header-top .container .pub-top-right { font-size: 12px; }
 
@@ -98,7 +98,7 @@
 
 .pub-header-center .container .pub-search-warp .pub-search .sea-type::after { right: 14px; }
 
-.pub-header-center .container .pub-search-warp .pub-search .sea-type:hover ul { display: block; }
+.pub-header-center .container .pub-search-warp .pub-search .sea-type:hover ul { display: block; z-index: 10; }
 
 .pub-header-center .container .pub-search-warp .pub-search .sea-type:hover::after { transform: rotate(180deg); }
 
@@ -146,13 +146,13 @@
 
 .pub-header-bottom .container .pub-recommend { position: relative; }
 
-.pub-header-bottom .container .pub-recommend span { display: inline-block; width: 212px; background: #FFA500; color: #fff; height: 36px; line-height: 36px; font-size: 14px; position: relative; padding-left: 36px; box-sizing: border-box; }
+.pub-header-bottom .container .pub-recommend span { display: inline-block; width: 212px; background: #FFA500; color: #fff; height: 37px; line-height: 37px; font-size: 14px; position: relative; padding-left: 36px; box-sizing: border-box; }
 
 .pub-header-bottom .container .pub-recommend span::before { content: ''; display: block; width: 18px; height: 14px; position: absolute; top: 50%; transform: translateY(-50%); left: 10px; background: url(../img/top/top_bg.png) no-repeat -182px -186px; }
 
-.pub-header-bottom .container .pub-recommend .pub-rec-menu { position: absolute; background: #2B2B2B; }
+.pub-header-bottom .container .pub-recommend .pub-rec-menu { position: absolute; background: #2B2B2B; z-index: 10; }
 
-.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list { padding: 0px 21px 8px 15px; width: 176px; background: url(../img/top/category-line.jpg) 0px bottom repeat-x; }
+.pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list { padding: 5px 21px 8px 15px; width: 176px; background: url(../img/top/category-line.jpg) 0px bottom repeat-x; }
 
 .pub-header-bottom .container .pub-recommend .pub-rec-menu .pub-menu-list div a { color: #FFA500; line-height: 33px; }
 
