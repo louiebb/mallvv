@@ -1,0 +1,43 @@
+.mallvv-current-nav { height: 40px; line-height: 40px; }
+
+.mallvv-current-nav i { font-size: 14px; color: #AAAAAA; margin-left: 1px; }
+
+.mallvv-current-nav span { margin: 0 3px; }
+
+.title { height: 37px; padding-left: 10px; line-height: 37px; background: #F5F5F5; }
+
+.main-left { width: 208px; margin-right: 10px; }
+
+.main-left .type { border: 1px solid #ccc; border-top: 0; }
+
+.main-left .type .title { border-top: 2px solid #C8C8C8; }
+
+.main-left .type-content { margin-bottom: 10px; background: #f5c; min-height: 206px; }
+
+.main-left .recently-browsee { margin-top: 10px; }
+
+.main-left .recently-browsee .content { min-height: 38px; background: #f42; }
+
+.main-left .recently-browsee .content a { display: block; height: 20px; text-align: center; padding: 9px 0; }
+
+.main-right { width: 980px; }
+
+.main-right .sort-type { border: 1px solid #ccc; padding-right: 6px; }
+
+.main-right .sort-type dl { margin-right: 73px; }
+
+.main-right .sort-type dl dt, .main-right .sort-type dl dd { float: left; padding: 10px; line-height: 20px; border-right: 1px solid #ccc; }
+
+.main-right .sort-type p { display: inline-block; }
+
+.main-right .sort-type .address-select { margin-left: 4px; display: inline-block; width: 70px; height: 20px; border: 1px solid #ccc; margin-top: 8px; }
+
+.main-right .sort-type .page { width: 50px; height: 20px; border: 1px solid #ccc; box-sizing: border-box; line-height: 20px; text-align: center; margin: 8px 2px; }
+
+.main-right .current-goodlist { height: 1012px; background: #1de; }
+
+.main-right .goodlist-page { margin: 10px auto 20px; height: 38px; background: #5fa; }
+
+.main-right .likeshop { min-height: 120px; background: #f14; }
+
+.main-right .likeshop .noneto { line-height: 120px; display: block; text-align: center; }

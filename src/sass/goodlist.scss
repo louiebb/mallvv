@@ -1,0 +1,106 @@
+.mallvv-current-nav{
+    height: 40px;
+    line-height: 40px;
+    i{
+        font-size: 14px;
+        color: #AAAAAA;
+        margin-left: 1px;
+    }
+    span{
+        margin: 0 3px;
+    }
+}
+.title{
+    height: 37px;
+    padding-left: 10px;
+    line-height: 37px;
+    background: #F5F5F5;
+}
+.mallvv-goodlist{
+
+}
+.main-left{
+    width: 208px;
+    margin-right: 10px;
+    .type{
+        border: 1px solid #ccc;
+        border-top: 0;
+        .title{
+            border-top: 2px solid #C8C8C8;
+        }
+        
+    }
+    .type-content{
+        margin-bottom: 10px;
+        background: #f5c;
+        min-height: 206px;
+    }
+    .recently-browsee{
+        margin-top: 10px;
+        .content{
+            min-height: 38px;
+            background: #f42;
+            a{
+                display: block;
+                height: 20px;
+                text-align: center;
+                padding: 9px 0;
+            }
+        }
+    }
+}
+
+.main-right{
+    width: 980px;
+    .sort-type{
+        border: 1px solid #ccc;
+        padding-right: 6px;
+        dl{
+            margin-right: 73px;
+            dt,dd{
+                float: left;
+                padding: 10px;
+                line-height: 20px;
+                border-right: 1px solid #ccc;
+            }
+        }
+        p{
+            display: inline-block;
+        }
+        .address-select{
+            margin-left: 4px;
+            display: inline-block;
+            width: 70px;
+            height: 20px;
+            border: 1px solid #ccc;
+            margin-top: 8px;
+        }
+        .page{
+            width: 50px;
+            height: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            line-height: 20px;
+            text-align: center;
+            margin: 8px 2px;
+        }
+    }
+    .current-goodlist{
+        height: 1012px;
+        background: #1de;
+    }
+    .goodlist-page{
+        margin: 10px auto 20px;
+        height: 38px;
+        background: #5fa;
+    }
+    .likeshop{
+        min-height: 120px;
+        background: #f14;
+        .noneto{
+            line-height: 120px;
+            display: block;
+            text-align: center;
+        }
+    }
+}
