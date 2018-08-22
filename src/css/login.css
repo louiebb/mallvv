@@ -1,0 +1,39 @@
+.mallvv-login .login-conrcon .pdtop .vvcode { position: absolute; display: block; height: 28px; line-height: 28px; width: 90px; text-align: center; background: #faa41b; font-size: 20px; border-radius: 5px; cursor: pointer; }
+
+.mallvv-login { height: 630px; background: #e2ebe8; }
+
+.mallvv-login .login-right { background: url(../img/login/login-top.png) no-repeat top center; width: 530px; padding: 19px 89px 20px 101px; margin-top: 40px; }
+
+.mallvv-login .login-conrcon { background: #fff; padding: 0 20px 60px; }
+
+.mallvv-login .login-conrcon input[type=text], .mallvv-login .login-conrcon input[type=password] { border: 0; height: 25px; font-size: 18px; border-radius: 0; box-shadow: inset 0 0 0; border-left: 1px solid #ccc; }
+
+.mallvv-login .login-conrcon .form-group { margin-top: 15px; border: 1px solid #ccc; }
+
+.mallvv-login .login-conrcon .nomtop { margin-top: 0px; }
+
+.mallvv-login .login-conrcon .none { border: 0; }
+
+.mallvv-login .login-conrcon .input-group { height: 48px; }
+
+.mallvv-login .login-conrcon .btnlogin { font-size: 15px; width: 304px; height: 40px; background: #FFA500; border-color: #FFA500; }
+
+.mallvv-login .login-conrcon .icon { text-align: center; width: 55px; border-radius: 0; }
+
+.mallvv-login .login-conrcon .pdtop { width: 247px; padding-top: 11px; position: relative; }
+
+.mallvv-login .login-conrcon .pdtop .vvcode { top: 80%; right: 16px; }
+
+.mallvv-login .login-conrcon #code { width: 140px; }
+
+.mallvv-login .login-conrcon .vvtip { position: absolute; top: 50px; left: 2px; }
+
+.mallvv-login .common { border: 0; }
+
+.mallvv-login .common p { height: 48px; width: 302px; line-height: 48px; }
+
+.mallvv-login .common p a { font-size: 14px; }
+
+.mallvv-login .common p a:hover { color: #FFA500; }
+
+.mallvv-login .common p a.high { color: #FFA500; }

@@ -1,5 +1,13 @@
 @charset "UTF-8";
 /* 头部样式 */
+.pub-header-center .container h1 { width: 180px; height: 60px; line-height: 60px; margin-top: 24px; }
+
+.pub-header-center .container h1 a { display: inline-block; }
+
+.pub-header-center .container h1 a img { max-width: 176px; max-height: 54px; cursor: pointer; }
+
+.pub-header-center .container .pub-ad-left { height: 60px; width: 195px; margin: 20px 90px 0 10px; background: url(../img/top/header-left.png) no-repeat; }
+
 .more::after { content: ""; display: block; height: 3px; width: 6px; position: absolute; top: 50%; right: 6px; margin-top: -2px; background: url(../img/top/top_bg.png) no-repeat; transition: all .3s ease-in; }
 
 .pub-header-top .container { height: 30px; background: #FAFAFA; border-bottom: 1px solid #F0F0F0; font-size: 13px; line-height: 30px; }
@@ -29,6 +37,8 @@
 .pub-header-top .container .pub-top-right { font-size: 12px; }
 
 .pub-header-top .container .pub-top-right dt, .pub-header-top .container .pub-top-right dl { float: left; }
+
+.pub-header-top .container .pub-top-right dt .currentAcc { color: #FFA500; font-weight: bold; }
 
 .pub-header-top .container .pub-top-right dt .mallvv { margin: 0 4px; color: #333333; }
 
@@ -77,14 +87,6 @@
 .pub-header-top .container .pub-top-right dd:hover::after { transform: rotateZ(180deg); }
 
 .pub-header-center .container { height: 100px; }
-
-.pub-header-center .container h1 { width: 180px; height: 60px; line-height: 60px; margin-top: 24px; }
-
-.pub-header-center .container h1 a { display: inline-block; }
-
-.pub-header-center .container h1 a img { max-width: 176px; max-height: 54px; cursor: pointer; }
-
-.pub-header-center .container .pub-ad-left { height: 60px; width: 195px; margin: 20px 90px 0 10px; background: url(../img/top/header-left.png) no-repeat; }
 
 .pub-header-center .container .pub-search-warp { height: 60px; width: 510px; padding-top: 23px; box-sizing: border-box; }
 

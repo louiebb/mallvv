@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type:application/json;charset=utf-8');
     class MYDB{
         function __construct($sn,$un,$pw,$db){
             //配置参数

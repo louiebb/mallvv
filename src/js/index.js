@@ -42,7 +42,6 @@
                     let navbar = self.navbar.offset().top;
                     let first = $firstfloor.offset().top;
                     let second = $secondfloor.offset().top;
-                    console.log(first,second);
                     $(window).scroll(function(){
                         if(this.scrollY>navbar){
                             self.navbar.addClass('scroll_fixed');
@@ -67,7 +66,7 @@
                 },
                 rmrpxpInit(type){
                     let self = this;
-                    com.myajax.ajaxProm('src/api/getdata.php?type=rmrpxp&id='+type,'',function(x){
+                    com.myajax.prom('src/api/getdata.php?type=rmrpxp&id='+type,'',function(x){
                         let content = x.map(x=>{
                             return `
                             <li>

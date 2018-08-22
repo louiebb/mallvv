@@ -1,5 +1,6 @@
 /* 头部样式 */
 @import 'var';
+@import 'common';
 $pub_nav_h:30px;
 
 .more::after{
@@ -83,6 +84,10 @@ $pub_nav_h:30px;
                 float: $fl;
             }
             dt{
+                .currentAcc{
+                    color:$highcolor;
+                    font-weight: bold;
+                }
                 .mallvv{
                     margin: 0 4px;
                     color: #333333;
@@ -209,24 +214,10 @@ $pub_nav_h:30px;
     .container{
         height: 100px;
         h1{
-            width: 180px;
-            height: 60px;
-            line-height: 60px;
-            margin-top: 24px;
-            a{
-                display: inline-block;
-                img{
-                    max-width: 176px;
-                    max-height: 54px;
-                    cursor: pointer;
-                }
-            }
+            @extend %h1;
         }
         .pub-ad-left{
-            height: 60px;
-            width: 195px;
-            margin: 20px 90px 0 10px;
-            background: url(../img/top/header-left.png) no-repeat;
+            @extend %ad-left;
         }
         .pub-search-warp{
             height: 60px;

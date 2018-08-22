@@ -1,0 +1,148 @@
+@import 'var';
+@import 'common';
+.mallv-register{
+    height: 586px;
+}
+
+%borbot {
+    border-bottom: 2px solid #ccc;
+}
+.reg-nav{
+    @extend %borbot;
+    position: relative;
+    padding-left: 190px;
+    li{
+        float: left;
+        height: 104px;
+        width: 216px;
+        margin: 0 30px;
+        line-height: 102px;
+        top: 2px;
+        left: 0;
+        position: relative;
+        text-align: center;
+        @extend %borbot;
+        .circle{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius:50%;
+            text-align: center;
+            line-height: 25px;
+            background: #DCDCDC;
+            color: #fff;
+           
+        }
+        &.active{
+            color:$highcolor;
+            border-color: $highcolor;
+            .circle{
+                background: $highcolor;
+            }
+        }
+        p{
+            display: inline;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+    }
+}
+.reg-main{
+    width: 402px;
+    margin: 45px auto;
+    .warp{
+        float: left;
+        width: 402px;
+        height: 46px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        padding: 10px 0;
+        position: relative;
+        &.last{
+            width: 242px;
+        }
+        &.btnreg{
+            cursor:pointer;
+            float: right;
+            background: $highcolor;
+            width: 148px;
+            height: 47px;
+            color: #fff;
+            border-radius: 5px; 
+            border: 0;  
+                   
+        }
+        span{
+            float: left;
+            width: 50px;
+            height: 26px;
+            text-align: center;
+            border-right: 1px solid #ccc;
+        }
+        input{
+            float: left;
+            width: 335px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 15px;
+            padding-left: 10px;
+            &.reg-vcode{
+                width: 105px;
+            }
+            &.reg-pcode{
+                width: 179px;
+            }
+        }
+        .reg-vvcode{
+            @extend %mallvvCode;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        
+    }
+    .reademe{
+        position: relative;
+        float: left;
+        width: 402px;
+        height: 70px;
+        line-height: 70px;
+        margin-bottom: 20px;
+        .agree{
+            position: relative;
+            width: 16px;
+            height: 16px;
+            margin-right: 20px;
+            opacity: 0;
+            z-index: 999;
+            cursor: pointer;
+        }
+        a{
+            color: #58C2ED;
+        }
+        label[for=agree]{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            // background: url(../img/common/accept-icon.png) no-repeat center;
+            position: absolute;
+            top: 26px;
+            left: 0;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+        }
+    }
+    .btnnext{
+        cursor: pointer;
+        float: left;
+        background: $highcolor;
+        width: 400px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+}

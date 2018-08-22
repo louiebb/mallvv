@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "启动 Chrome 并打开 localhost",
             "url": "http://localhost:1029",
-            // "url": "http://localhost:1029/src/html/top.html",
+            // "url": "http://localhost:1029/src/html/login.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

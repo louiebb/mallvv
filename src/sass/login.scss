@@ -1,0 +1,90 @@
+@import 'var';
+@import 'common';
+
+.mallvv-login{
+    height: 630px;
+    background: #e2ebe8;
+    .login-right{
+        background: url(../img/login/login-top.png) no-repeat top center;
+        width: 530px;
+        padding: 19px 89px 20px 101px;
+        margin-top: 40px;
+    }
+    .login-conrcon{
+        
+        background: #fff;
+        padding: 0 20px 60px;
+        input[type=text],
+        input[type=password]{
+            border:0;
+            height: 25px;
+            font-size: 18px;
+            border-radius:0;
+            box-shadow:inset 0 0 0 ;
+            border-left: 1px solid #ccc;
+        }
+        .form-group{
+            margin-top: 15px;
+            border: 1px solid #ccc;
+        }
+        .nomtop{
+            margin-top: 0px;
+        }
+        .none{
+            border: 0;
+        }
+        .input-group{
+            height: 48px;
+        }
+        .btnlogin{
+            font-size: 15px;
+            width: 304px;
+            height: 40px;
+            background: $highcolor;
+            border-color: $highcolor;
+        }
+        .icon{
+            text-align: center;
+            width: 55px;
+            border-radius:0;
+        }
+        .pdtop{
+            width: 247px;
+            padding-top: 11px;
+            position: relative;
+            .vvcode{
+                @extend %mallvvCode;
+                top: 80%;
+                right: 16px;
+            }
+        }
+        #code{
+            width: 140px;
+        }
+
+        .vvtip{
+            position: absolute;
+            top: 50px;
+            left: 2px;
+        }
+        
+    }
+    .common{
+        border: 0;
+        p{
+            height: 48px;
+            width: 302px;
+            line-height: 48px;
+            a{
+                font-size: 14px;
+                &:hover{
+                    color:$highcolor;
+                }
+            }
+            a.high{
+                color:$highcolor;
+            }
+        }
+        
+    }
+}

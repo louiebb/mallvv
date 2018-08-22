@@ -21,6 +21,11 @@ define(['jquery','common'], function($,com) {
         colblcok:'.pub-nav-second .col-blcok',
         pubnavsecond:'.pub-nav-second',
         pubmallvvlog:'.pub-mallvv-log',
+        //cookie名
+        currentAcc:'currentAcc',
+        //节点类名
+        pageAcc:'.currentAcc',
+        
         init(path){
             //获取节点
             this.path = path;
@@ -38,9 +43,20 @@ define(['jquery','common'], function($,com) {
             this.colblcok = $(this.colblcok);
             this.pubnavsecond = $(this.pubnavsecond);
             this.pubmallvvlog = $(this.pubmallvvlog);
+            this.pageAcc = $(this.pageAcc);
+            
+            //获取cookie
+            this.currentAcc = com.mycookie.get(this.currentAcc);
+            if(this.currentAcc){
+                this.currentAcc = JSON.parse(this.currentAcc);
+                this.pageAcc.text(this.currentAcc.account);                
+                this.pageAcc.siblings('.mallvv-do').css({display:'none'});
+            }else{
+                this.pageAcc.siblings('.mallvv-do').css({display:'inlineBlock'});
+            }
+            console.log(this.currentAcc );
             
             //更改属性值
-
             this.pubmallvvlog.prop('src',this.path+'/img/top/05174866977471586.png');
             let self = this;
             //绑定事件
@@ -55,17 +71,18 @@ define(['jquery','common'], function($,com) {
                 self.pubnavsecond.css('display','none');            
             })
     
-    
             //初始化
             this.initProvince(this);
             this.initPubNav(this);
             this.initRecommend();
+
+            //获取当前用户
     
     
         },
         initProvince(self){
-            com.myajax.ajaxProm(self.path+'/api/getProvince.php','',function(txt){
-                var content = JSON.parse(txt).map(x=>`<li>${x.name}</li>`);
+            com.myajax.prom(self.path+'/api/getProvince.php','',function(txt){
+                var content = txt.map(x=>`<li>${x.name}</li>`);
                 self.province.html(content).on('click','li',function(e){
                     var $lis = $(this).siblings('li');
                     $lis.removeClass('active');
@@ -75,8 +92,8 @@ define(['jquery','common'], function($,com) {
             })
         },
         initPubNav(self){
-            com.myajax.ajaxProm(self.path+'/api/getnav.php','',function(data){
-                let content = JSON.parse(data).map(x=>`
+            com.myajax.prom(self.path+'/api/getnav.php','',function(data){
+                let content = data.map(x=>`
                             <dd class="${x.more} pub-${x.pubclass}">
                             <div data-id="${x.id}">
                                 <a href="#">${x.value}</a>
@@ -90,13 +107,10 @@ define(['jquery','common'], function($,com) {
                     self.initnavVal($(this).children('div').attr('data-id'),$(this).children('ul'));
                 });
             });
-    
-            
         },
         initnavVal(navid,ele){
             let self = this;
-            com.myajax.ajaxProm(this.path+'/api/getnavValue.php?id='+navid,'',function(data){
-                data = JSON.parse(data);
+            com.myajax.prom(this.path+'/api/getnavValue.php?id='+navid,'',function(data){
                 let content ;
                 if(data.length && data[0].navid !=5){
                     content =data.map(x=>`<li><a href="${x.url}">${x.value}<a/></li>`).join('');
@@ -110,7 +124,7 @@ define(['jquery','common'], function($,com) {
         },
         initRecommend(){
                 let self = this;
-                com.myajax.ajaxProm(self.path+'/api/getdata.php?type=rec','',function(x){
+                com.myajax.prom(self.path+'/api/getdata.php?type=rec','',function(x){
                         let  content =x.map(j=>{
                         return `<div class="pub-menu-list">
                         <div><a href="${j.url}">${j.title}</a></div>
@@ -120,7 +134,7 @@ define(['jquery','common'], function($,com) {
                         self.pubrecmenu.html(content);
                         let  $uls = self.pubrecmenu.children().children('ul');
                         $uls.each(function(x,y){
-                            com.myajax.ajaxProm(self.path+'/api/getdata.php?type=recval&id='+y.dataset.id,'',function(k){
+                            com.myajax.prom(self.path+'/api/getdata.php?type=recval&id='+y.dataset.id,'',function(k){
                                 let content = k.map(z=>`<li><a href="${z.url}">${z.val}</a></li>`).join('');
                                 $(y).html(content);
                             });
@@ -130,7 +144,7 @@ define(['jquery','common'], function($,com) {
         },
         initSecondNav(tab){
             let self = this;
-            com.myajax.ajaxProm(self.path+'/api/getdata.php?type='+tab,'',function(data){
+            com.myajax.prom(self.path+'/api/getdata.php?type='+tab,'',function(data){
                     let content = ``;
                     data.forEach(x=>{
                     content += `<div class="pub-nav-wrap" style="display: block;">
@@ -144,8 +158,6 @@ define(['jquery','common'], function($,com) {
                 self.colblcok.html(content);
             })
         }
-        
-        
     }
     return  vvtop;
     

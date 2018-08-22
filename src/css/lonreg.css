@@ -1,0 +1,19 @@
+.pub-header h1 { width: 180px; height: 60px; line-height: 60px; margin-top: 24px; }
+
+.pub-header h1 a { display: inline-block; }
+
+.pub-header h1 a img { max-width: 176px; max-height: 54px; cursor: pointer; }
+
+.pub-header .pub-ad-left { height: 60px; width: 195px; margin: 20px 90px 0 10px; background: url(../img/top/header-left.png) no-repeat; }
+
+.pub-footer { border-top: 1px solid #ccc; text-align: center; }
+
+.pub-footer p { color: #666; word-spacing: 5px; padding: 10px 0; }
+
+.pub-header, .pub-header ul li, .pub-footer { height: 100px; }
+
+.pub-header ul li { float: left; }
+
+.pub-header ul li { font-size: 15px; }
+
+.pub-header ul li a { padding: 0 20px; line-height: 100px; }

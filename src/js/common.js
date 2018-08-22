@@ -7,6 +7,29 @@
 
 define(['jquery'],function($){
     var com = {
+        mydoc:{
+            getUrlParms(url) {
+                url = decodeURI(url);
+                url = url[0] === '?' ? url.slice(1) : url;
+            
+                var obj = {};
+                url = url.split('&');
+                url.forEach(function(item) {
+                    var i = item.split('=');
+                    obj[i[0]] = i[1];
+                });
+                return obj;
+            },
+        },
+        myreg:{
+            //手机号
+            phone(t){
+                return !/^1[3-9]\d{9}$/.test(t);
+            },
+            phone(){},
+            phone(){},
+            phone(){},
+        },
         mystyle:{
             getCss:function(ele,attr){
                 if (window.getComputedStyle) { //Standard browser
@@ -79,6 +102,98 @@ define(['jquery'],function($){
                     })(attr);
                 }
             }
+        },
+        myajax:{
+            prom(url,data,callback){
+                let Prom = new Promise((resolve,reject)=>{
+                    let type = data ?'post':'get';
+                    $.ajax({
+                        type,
+                        url:url,
+                        data,
+                        success:function(data){
+                            resolve(data);
+                        }
+                    });
+                });
+                Prom.then(data=>{
+                    callback(data);
+                });
+            },
+            syncProm(url,data,callback){
+                let Prom = new Promise((resolve,reject)=>{
+                    let type = data ?'post':'get';
+                    $.ajax({
+                        type,
+                        url:url,
+                        data,
+                        async:true,
+                        success:function(data){
+                            resolve(data);
+                            console.log(3);
+                        },
+                        error:function(e){
+                            // lgz question  这里的请求为什么错误的  登录
+                            // console.log(e);
+                            console.log(4);
+                            resolve(e.responseText);
+                        }
+                    });
+                });
+                Prom.then(data=>{
+                    callback(data);
+                });
+            }
+        },
+        mycookie:{
+            get:function (name) { 
+                var str = '';
+                var cookies = document.cookie;
+                cookies = cookies.split('; ');
+                for(var i = 0,j=cookies.length;i<j;i++){
+                    var  arr = cookies[i].split('=');
+                    if(arr[0]==name){
+                        str = arr[1];
+                    }
+                }
+                return str;
+        
+             },
+            remove:function (name) { 
+                var now = new Date();
+                now.setDate(now.getDate()-1);
+                this.set(name,'x',{expires:now,path:'\/'});
+             },
+            set:function (name,value,obj) { 
+                var str = name + '='+value;
+                //不传obj会为undefined
+                if(!obj){
+                    obj = {};
+                }
+                //有效期
+                if(obj.expires){
+                    //改为直接传天数
+                    // str+=';expires='+obj.expires.toUTCString();
+                    let date = new Date();
+                    date.setDate(date.getDate()+obj.expires)
+                    str+=';expires='+date.toUTCString();
+                }
+                //路径
+                if(obj.path){
+                    str+=';path='+obj.path;
+                }else{
+                    str+=';path=/';
+                }
+                //域名
+                if(obj.domain){
+                    str+=';domain='+obj.domain;
+                }
+                //安全性
+                if(obj.secure){
+                    str+=';secure='+obj.secure;
+                }
+                document.cookie = str;
+             }
         },
         //轮播图构造函数
         Carousel: function(options){
@@ -252,20 +367,17 @@ define(['jquery'],function($){
             // 初始化并传递参数
             this.init();
         },
-        myajax:{
-            ajaxProm(url,data,callback){
-                let Prom = new Promise((resolve,reject)=>{
-                    $.ajax({
-                        url:url,
-                        success:function(data){
-                            resolve(data);
-                        }
-                    });
-                });
-                Prom.then(data=>{
-                    callback(data);
-                });
-            }
+        code:{
+            enCode(){
+                var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                let res = '';
+                for(var i=0;i<4;i++){
+                    // 获取随机索引值
+                    var idx = parseInt(Math.random()*str.length);
+                    res += str.charAt(idx);
+                }
+                return  res;
+            },
         }
     };
 

@@ -1,4 +1,5 @@
 @import 'var';
+@import 'common';
 .pub-footer{
     // border-top: 5px solid #ccc;
     .pub-footer-top{
@@ -81,12 +82,6 @@
     }
     .pub-footer-bottom{
         height: 66px;
-        border-top: 1px solid #ccc;
-        text-align: center;
-        p{
-            color: #666;
-            word-spacing: 5px;
-            padding: 10px 0;
-        }
+       @extend %footer;
     }
 }

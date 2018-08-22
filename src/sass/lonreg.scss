@@ -1,0 +1,36 @@
+@import 'var';
+@import 'common';
+
+%h{
+    height: 100px;
+}
+%l{
+    float: left;
+}
+
+.pub-header{
+    @extend %h;
+    h1{
+        @extend %h1;
+    }
+    .pub-ad-left{
+        @extend %ad-left;
+    }
+    ul{
+        li{
+            @extend %l;
+            @extend %h;
+            font-size: 15px;
+            a{
+                padding: 0 20px;
+                line-height: 100px;
+            }
+        }
+    }
+}
+
+.pub-footer{
+    @extend %h;
+    @extend %footer;
+
+}
