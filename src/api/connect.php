@@ -1,4 +1,5 @@
 <?php
+    //注意响应头，前台想要获取字符数据dataType设置为text
     header('Content-Type:application/json;charset=utf-8');
     class MYDB{
         function __construct($sn,$un,$pw,$db){

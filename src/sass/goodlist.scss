@@ -1,24 +1,14 @@
-.mallvv-current-nav{
-    height: 40px;
-    line-height: 40px;
-    i{
-        font-size: 14px;
-        color: #AAAAAA;
-        margin-left: 1px;
-    }
-    span{
-        margin: 0 3px;
-    }
-}
+@import 'var';
+@import 'common';
 .title{
     height: 37px;
     padding-left: 10px;
     line-height: 37px;
     background: #F5F5F5;
 }
-.mallvv-goodlist{
+// .mallvv-goodlist{
 
-}
+// }
 .main-left{
     width: 208px;
     margin-right: 10px;
@@ -32,8 +22,34 @@
     }
     .type-content{
         margin-bottom: 10px;
-        background: #f5c;
+        // background: #f5c;
         min-height: 206px;
+        padding-left: 10px;
+        li{
+            padding-left: 15px;
+            ul{
+                margin-left: 20px;
+            }
+        }
+        i{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            background: url(../img/common/2014shop_background_img.png) no-repeat;
+            &:hover{
+                border-color: $highcolor;
+                // margin: -1px;
+                // margin-right: 4px;
+            }
+            &.open{
+                background-position:  -11px 0;
+            }
+            // &.close{
+            //     background-position:  0 0;
+            // }
+        }
     }
     .recently-browsee{
         margin-top: 10px;
@@ -54,26 +70,128 @@
     width: 980px;
     .sort-type{
         border: 1px solid #ccc;
+        margin-bottom:10px;
         padding-right: 6px;
         dl{
             margin-right: 73px;
             dt,dd{
                 float: left;
-                padding: 10px;
+                padding: 9px;
                 line-height: 20px;
                 border-right: 1px solid #ccc;
+            }
+            dd{
+                i{
+                    display:inline-block;
+                    width: 7px;
+                    height: 10px;
+                    background: url(../img/common/2014shop_background_img.png) no-repeat 0 -11px;
+                }
+                &.active{
+                    background: #fff;
+                    &.desc{
+                        i{
+                            background-position: -7px -11px;
+                        }
+                    }
+
+                    &.asc{
+                        i{
+                            background-position: -14px -11px;
+                        }
+                    }
+                }
             }
         }
         p{
             display: inline-block;
         }
         .address-select{
-            margin-left: 4px;
-            display: inline-block;
-            width: 70px;
+            position: relative;            
             height: 20px;
-            border: 1px solid #ccc;
             margin-top: 8px;
+            margin-left: 4px;
+            line-height: 20px;
+            span.address{
+                display: inline-block;
+                width: 70px;
+                height: 20px;
+                padding: 0 5px;
+                border: 1px solid #ccc;
+                background: #fff;
+                position: relative;
+                &::after{
+                    @extend %mallvvArrow;   
+                    right: -8px;
+                }
+            }
+            &:hover{
+                span.address{
+                    border-bottom-color: #fff;
+                    z-index: 11;
+                    &::after{
+                        transform:rotate(180deg);
+                    }
+                }
+                .content{
+                    display: block;
+                }
+            }
+            .content{
+                position: absolute;
+                top: 21px;
+                left: -135px;
+                width: 370px;
+                height: 380px;
+                z-index: 10;
+                border: 1px solid #ccc;
+                background: #fff;
+                display: none;
+                .top{
+                    padding: 16px 32px 0 15px;
+                    .cydq{
+                        p{
+                            height:16px;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-weight: bold;
+                        }
+                        div.cy{
+                            margin: 20px 0;
+                            span{
+                                margin-right: 65px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        div.sf{
+                            padding-top: 10px;
+                            .warp{
+                                width: 80px;
+                                float: left;
+                                margin-bottom: 10px;
+                                .zm{
+                                    padding-right: 6px;
+                                }
+                                .warp-city{
+                                    span{
+                                        display: block;
+                                        padding-left: 6px;
+                                        border-left: 1px dotted #ccc;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .bottom{
+                    padding-left: 10px;
+                    height: 25px;
+                    line-height: 25px;
+                    background: #F1F1F1;
+                }
+            }
         }
         .page{
             width: 50px;
@@ -83,24 +201,102 @@
             line-height: 20px;
             text-align: center;
             margin: 8px 2px;
+            background: #fff;
+            color: #000;
+            &.none{
+                color:#AAAAAA;
+                background: #FAFAFA;
+            }
         }
     }
     .current-goodlist{
         height: 1012px;
+        width: 1000px;
         background: #1de;
+        position: relative;
+        li{
+            position: relative;
+            float: left;
+            margin:5px 20px 5px 0;
+            transition: all .2s linear;
+            .item{
+                border: 1px solid #ccc;
+                width: 228px;
+                height: 343px;
+            }
+            .warp{
+                padding:0 10px;
+            }
+            img{
+                display: block;
+                width: 228px;
+                height: 230px;
+            }
+            p.name{
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom: 10px;
+            }
+            p.price-warp{
+                em{
+                    color: $highcolor;
+                    font-weight: bold;   
+                }
+                margin-bottom: 15px;
+            }
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+            &:hover .item{
+               margin:-4px;
+               border: 5px solid $highcolor;
+               box-shadow:  0px 4px 4px rgba(102,102,102,0.65);
+            }
+        }
     }
     .goodlist-page{
         margin: 10px auto 20px;
-        height: 38px;
-        background: #5fa;
-    }
-    .likeshop{
-        min-height: 120px;
-        background: #f14;
-        .noneto{
-            line-height: 120px;
-            display: block;
+        font-size: 0;
+        .page{
+            height: 38px;
+            width: 470px;
+            margin: 0 auto;
+            line-height: 38px;
+            border: 1px solid #ccc;
+        }
+        span{
+            font-size: 12px;
+            display: inline-block;
+            border-right: 1px solid #ccc;
             text-align: center;
         }
+        .num,.more{
+            width: 36px;
+        }
+        .none,.current{
+            background: #FAFAFA;
+        }
+        .tag{
+            width: 44px;
+        }
+        .intag{
+            width: 60px;
+        }
+        .endpage{
+            border-right: 0;
+        }
     }
+    .likethink{
+        border: 1px solid #ccc;
+        .likeshop{
+            min-height: 120px;
+            border-top: 1px solid #ccc;
+            .noneto{
+                line-height: 120px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    
 }

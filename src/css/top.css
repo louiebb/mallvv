@@ -8,6 +8,8 @@
 
 .pub-header-center .container .pub-ad-left { height: 60px; width: 195px; margin: 20px 90px 0 10px; background: url(../img/top/header-left.png) no-repeat; }
 
+.pub-header-center .container .pub-mycart span.pub-cart-nam::after { content: ""; position: relative; font-size: 0px; line-height: 0; vertical-align: middle; display: inline-block; width: 0px; height: 0px; border-width: 4px; border-color: #777 transparent transparent transparent; border-style: solid dashed dashed dashed; transition: all .3s ease; transform-origin: 50% 30%; }
+
 .more::after { content: ""; display: block; height: 3px; width: 6px; position: absolute; top: 50%; right: 6px; margin-top: -2px; background: url(../img/top/top_bg.png) no-repeat; transition: all .3s ease-in; }
 
 .pub-header-top .container { height: 30px; background: #FAFAFA; border-bottom: 1px solid #F0F0F0; font-size: 13px; line-height: 30px; }
@@ -122,7 +124,7 @@
 
 .pub-header-center .container .pub-mycart span.pub-cart-nam::before { content: ""; display: block; height: 17px; width: 26px; position: absolute; top: 50%; margin-top: -9px; left: 10px; background: url(../img/top/top_bg.png) no-repeat -120px 0; }
 
-.pub-header-center .container .pub-mycart span.pub-cart-nam::after { content: ""; position: relative; font-size: 0px; line-height: 0; vertical-align: middle; display: inline-block; width: 0px; height: 0px; margin-left: 8px; border-width: 4px; border-color: #777 transparent transparent transparent; border-style: solid dashed dashed dashed; transition: all .3s ease; }
+.pub-header-center .container .pub-mycart span.pub-cart-nam::after { margin-left: 8px; }
 
 .pub-header-center .container .pub-mycart span.pub-cart-nam:hover { background: #fff; border-bottom-color: #fff; z-index: 33; }
 
@@ -189,3 +191,9 @@
 .pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap ul li a { font-weight: 500; display: inline-block; padding: 0 10px; white-space: nowrap; line-height: 24px; color: #929292; border-bottom: 0; }
 
 .pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap ul li a:hover { background: #FFA500; color: #fff; }
+
+.mallvv-current-nav { height: 40px; line-height: 40px; font-size: 0; }
+
+.mallvv-current-nav i { font-size: 14px; color: #AAAAAA; margin-left: 1px; }
+
+.mallvv-current-nav span { font-size: 12px; margin: 0 3px; }

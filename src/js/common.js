@@ -120,25 +120,26 @@ define(['jquery'],function($){
                     callback(data);
                 });
             },
-            syncProm(url,data,callback){
+            syncProm(url,data,async,callback){
+                console.log('async:'+async);
                 let Prom = new Promise((resolve,reject)=>{
                     let type = data ?'post':'get';
                     $.ajax({
                         type,
                         url:url,
                         data,
-                        async:true,
-                        success:function(data){
-                            resolve(data);
-                            console.log(3);
+                        dataType:'text',//后台返回的是json格式的数据台接收用text
+                        beforeSend :function(e){
+                            
+                        },
+                        async:async,
+                        success:function(a){
+                            resolve(a);
                         },
                         error:function(e){
-                            // lgz question  这里的请求为什么错误的  登录
-                            // console.log(e);
-                            console.log(4);
-                            resolve(e.responseText);
+                            console.log(e);
                         }
-                    });
+                    })
                 });
                 Prom.then(data=>{
                     callback(data);
