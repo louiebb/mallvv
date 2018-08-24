@@ -1,5 +1,5 @@
     require(['config'],function(){
-        require(['jquery','common','top','bottom'],function($,com,vvtop,vvbott){
+        require(['jquery','common','top','bottom','bootstrap'],function($,com,vvtop,vvbott,bootstrap){
 			var indexpage = {
                 header:'#pub-header',
 				footer:'#pub-footer',
@@ -22,10 +22,10 @@
                     });
 					
 					//初始化
-					new com.Carousel({
-						ele:'.mallvv-banner',
-						imgs:['src/img/index/banner/web-101-101-1.jpg','src/img/index/banner/web-101-101-2.jpg','src/img/index/banner/web-101-101-4.jpg','src/img/index/banner/web-101-101-5.jpg']
-					});
+					// new com.Carousel({
+					// 	ele:'.mallvv-banner',
+					// 	imgs:['src/img/index/banner/web-101-101-1.jpg','src/img/index/banner/web-101-101-2.jpg','src/img/index/banner/web-101-101-4.jpg','src/img/index/banner/web-101-101-5.jpg']
+					// });
                     this.headerInit();
                     this.footerInit();
                     //热卖热评新品
