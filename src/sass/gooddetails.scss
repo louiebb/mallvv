@@ -308,11 +308,109 @@
                 @extend %e6border;
                 border-top: 0;
                 height: 35px;
+                dl {
+                    font-size: 0;
+                    display: block;
+                    padding: 6px 0;
+                    .rating {
+                        background: url(../img/common/2014grate.png) no-repeat 0 -18px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        *display: inline;
+                        width: 79px;
+                        height: 17px;
+                        *zoom: 1;
+                        span {
+                            background: url(../img/common/2014grate.png) no-repeat 100% 0;
+                            display: block;
+                            height: 18px;
+                        }
+                    }
+                    dt {
+                        font-size: 12px;
+                        color: #666;
+                        vertical-align: top;
+                        letter-spacing: normal;
+                        word-spacing: normal;
+                        text-align: right;
+                        display: inline-block;
+                        *display: inline;
+                        width: 68px;
+                        *zoom: 1;
+                    }
+                    dd{
+                        font-size: 12px;
+                        color: #333;
+                        vertical-align: top;
+                        letter-spacing: normal;
+                        word-spacing: normal;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        display: inline-block;
+                        *display: inline;
+                        width: 130px;
+                        *width: 125px;
+                        overflow: hidden;
+                        zoom: 1;
+                        em {
+                            color: #ffa500;
+                            font-weight: 600;
+                            vertical-align: middle;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+  
             }
             .pinfen{
                 padding: 0 8px;
                 height: 108px;
                 border-bottom: 1px dotted #ccc;
+                .ncs-detail-rate {
+                    color: #999;
+                    width: 182px;
+                    padding: 5px;
+                    margin: 0 auto;
+                    border-bottom: dotted 1px #E6E6E6;
+                    h5 {
+                        color: #777;
+                        margin-bottom: 4px;
+                        strong {
+                            font-weight: 700;
+                            margin-right: 30px;
+                        }
+                    }
+                    li {
+                        padding: 2px 0;
+                    }
+                    .credit {
+                        color: #555;
+                        display: inline-block;
+                        width: 35px;
+                        margin-left: 4px;
+                    }
+                    .equal {
+                        color: #ffa500;
+                        display: inline-block;
+                        i {
+                            background: url(../img/common/2014grate.png) no-repeat -18px -40px;
+                            vertical-align: middle;
+                            display: inline-block;
+                            width: 9px;
+                            height: 8px;
+                            margin-right: 4px;
+                        }
+                        em {
+                            color: #FFF;
+                            background-color: #ffa500;
+                            text-align: center;
+                            display: inline-block;
+                            width: 40px;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+
             }
             .conn{
                 height: 36px;
@@ -353,6 +451,16 @@
                         height: 16px;
                         background-position: 0 -210px;
 
+                    }
+                    #certMaterzhping {
+   
+                        background-position: 0 -130px;
+                    }
+                    #certMatertuihuo {
+                        background-position: 0 -90px;
+                    }
+                    #certMaterxiaoxie {
+                        background-position: 0 -389px;
                     }
                 }
             }
@@ -487,9 +595,9 @@
                     }
                     .shop{
                         display: inline-block;
+                        width: 122px;
                         a{
                             font-size: 12px;
-                            display: inline-block;
                             overflow: hidden;
                             width: 120px;
                             white-space: nowrap;
@@ -537,26 +645,366 @@
     } 
     .det-main{
         width: 980px;
-        background: #ccc;
-        height: 1000px;
+        // background: #ccc;
         .main-title{
-            height: 83px;
-            margin-top: 7px;
-            background: #34f;
+            height: 90px;
+            // background: #34f;
             margin-bottom: 10px;
+            position: relative;
             .title{
                 @extend %e6border;
-                li{
-                    float: left;
-                    padding: 12px 15px 7px 12px;
-                    background: #F5F5F5;
-                    border-right: 1px solid #ccc; 
-                }
+                background: #FCFCFC;
+                position: relative;
+                @extend %mallvvLis;
+            }
+        }
+        .same{
+            div{
+                margin: 12px;
+                float: left;
+                line-height: 12px;
+                width: 212px;
             }
         }
         .main-content{
             img{
                 display: block;
+            }
+        }
+        .good-reviews{
+            width: 980px;
+            @extend %e6border;
+            border-top: 0;
+            margin-bottom: 10px;
+            .title{
+                @extend %mallvvTop;
+            }
+            .content{
+                padding-top:20px;
+                padding-left: 28px;
+                &>div{
+                    height: 100px;
+                }
+                .left{
+                    width: 168px;
+                    .percent{
+                        color: $highcolor;
+                        .num{
+                            font-size: 30px;
+                            line-height: 0;
+                        }
+                        .hp{
+                            margin-left: 5px;
+                        }
+                    }
+                    p{
+                        margin-top: 9px;
+                    }
+                    
+                }
+                .center{
+                    margin-top: 2px;
+                    &>div{
+                        width: 180px;
+                        height: 15px;
+                        line-height: 15px;
+                        margin-bottom: 5px;
+                    }
+                    .pf{
+                        height: 15px;
+                        width: 100px;
+                        background: #eee;
+                        span{
+                            display: inline-block;
+                            width: 15px;
+                            height:15px;
+                            background: $highcolor;
+                        }
+                    }
+                }
+                .right{
+                    width: 209px;
+                    height: 62px;
+                    border-left: 1px dotted #ccc;
+                    padding-left: 30px;
+                    button{
+                        width: 106px;
+                        height: 28px;
+                        background: $highcolor;
+                        @extend %e6border;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+                
+                
+            }
+
+        }
+        .reviews{
+            position: relative;
+            min-height: 152px;
+            @extend %e6border;
+            border-top: 0;
+            .title{
+                margin-left: -1px;
+                border-right: 0;
+            }
+            .content{
+                position: relative;
+                min-height: 120px;
+                .tip-none{
+                    @extend %mallvvNoneTip;
+                }
+            }
+            
+        }
+        .salesRecord{
+            @extend %e6border;
+            border-top: 0;
+            margin-top: 20px;
+            .title{
+                @extend %mallvvTop;
+            }
+            .content{
+                li{
+                    min-height: 40px;
+                    line-height: 40px;
+                    padding-left: 10px;
+                    .price{
+                        span{
+                            font-weight: bold;
+                            color: $highcolor;
+                        }
+                    }
+                    .tip{
+                      margin-left: 20px;
+                      width: 385px;
+                      height: 17px;
+                      line-height: 17px;
+                      margin-top: 11px;
+                      background:#C8C8C8;
+                      color: #fff;
+                    }
+                }
+            }
+        }
+        .slaeView{
+            thead th {
+                font-weight: 600;
+                text-align: center;
+                padding: 8px 0;
+                border-bottom: solid 2px #E7E7E7;
+                .w200{
+                    width: 200px;
+                }
+                .w100{
+                    width: 100px;
+                }
+            }
+            tbody{
+                position: relative;
+            }
+            .none-tip{
+                // @extend %mallvvNoneTip;
+                color: #999;
+                text-align: center;
+                height: 70px;
+                line-height: 70px;
+                padding: 15px 0;
+                background-color: #FFF;
+            }
+        }
+        .ncs-goods-title-bar {
+            background-color: #FCFCFC;
+            border-style: solid;
+            border-color: #ffa500 #D7D7D7 #F5F5F5 #D7D7D7;
+            border-width: 2px 1px 1px 1px;
+            h4 {
+                font: normal 14px/20px "Microsoft Yahei";
+                text-decoration: none;
+                color: #777;
+                display: block;
+                padding: 6px 15px 5px 15px;
+            }
+        }
+        .ncs-goods-info-content {
+            padding-bottom: 23px;
+             .top {
+                padding: 9px;
+                margin-bottom: 20px;
+                border: solid #D7D7D7;
+                border-width: 0 1px 1px;
+            }
+        }
+        .ncs-cosult-tips {
+            width: 780px;
+            height: 65px;
+            float: left;
+            margin: 10px 0 5px 10px;
+            position: relative;
+            z-index: 1;
+            i {
+                background: url(../img/common/2014_ncs_public_img.png) no-repeat -80px 0;
+                width: 147px;
+                height: 65px;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+            p {
+                line-height: 18px;
+                color: #9B827D;
+                width: 700px;
+                height: 36px;
+                position: absolute;
+                z-index: 1;
+                top: 28px;
+                left: 64px;
+            }
+        }
+        a.ncs-btn {
+            @extend %mallvvABTN;
+            
+        }
+        .ncs-cosult-askbtn {
+            float: right;
+            padding: 10px;
+            a.ncs-btn-red {
+                background-color: #ffa500;
+            }
+        }
+        .ncs-goods-title-nav {
+            margin-top: 7px;
+            ul {
+                font-size: 0;
+                *word-spacing: -1px;
+                background-color: #FCFCFC;
+                border: solid #D7D7D7 1px;
+                li {
+                    vertical-align: top;
+                    letter-spacing: normal;
+                    word-spacing: normal;
+                    display: inline-block;
+                    &.current {
+                        margin: -7px 0 -1px -1px;
+                        a {
+                            color: #333;
+                            background-color: #FFF;
+                            padding: 11px 15px 6px 15px;
+                            border-style: solid;
+                            border-color: #ffa500 #DDD transparent #DDD;
+                            border-width: 2px 1px 0 1px;
+                        }
+                    }
+                    a {
+                        font: normal 14px/20px "Microsoft Yahei";
+                        text-decoration: none;
+                        color: #777;
+                        background-color: #F5F5F5;
+                        display: block;
+                        padding: 6px 15px 5px 15px;
+                        border-style: solid;
+                        border-color: #D7D7D7;
+                        border-width: 0 1px 0 0;
+                    }
+                }
+            }
+        }
+        .ncs-cosult-main {
+            padding: 20px 0 0 0;
+            border: solid #D7D7D7;
+            border-width: 0 1px 1px;
+        }
+        .ncs-norecord {
+            color: #999;
+            text-align: center;
+            height: 70px;
+            line-height: 70px;
+            padding: 15px 0;
+            background-color: #FFF;
+            border: none !important;
+        }
+
+        .ncs-recommend {
+            .title {
+                background-color: #FFF;
+                height: 20px;
+                padding: 5px 10px;
+                border-bottom: solid 2px #ffa500;
+                h4 {
+                    font: 14px/20px "Microsoft Yahei";
+                    color: #333;
+                    margin-left: 6px;
+                }
+            }
+            .content ul {
+                font-size: 0;
+                *word-spacing: -1px;
+                white-space: nowrap;
+                padding: 10px 0 5px 0;
+                margin-left: -5px;
+                li {
+                    font-size: 12px;
+                    vertical-align: top;
+                    letter-spacing: normal;
+                    word-spacing: normal;
+                    display: inline-block;
+                    *display: inline;
+                    width: 20%;
+                    padding: 10px 0 5px 0;
+                    border-left: dotted 1px #E6E6E6;
+                    *zoom: 1;
+                    dl {
+                        text-align: center;
+                        width: 100%;
+                        padding-top: 120px;
+                        margin: 0px auto;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .goods-name {
+                        line-height: 18px;
+                        white-space: pre-wrap;
+                        height: 36px;
+                        width: 90%;
+                        overflow: hidden;
+                        margin: 8px auto;
+                    }
+                    .goods-pic {
+                        background: #FFF;
+                        width: 120px;
+                        height: 120px;
+                        margin-left: -60px;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        a{
+                            img{
+                                max-width: 120px;
+                                max-height: 120px;
+                            }
+                        }
+                        
+                    }
+                    .goods-price {
+                        font-weight: 600;
+                        color: #ffa500;
+                        height: 20px;
+                        a {
+                            background-color: #FFF;
+                            text-align: center;
+                            vertical-align: middle;
+                            display: table-cell;
+                            *display: block;
+                            width: 120px;
+                            height: 120px;
+                            overflow: hidden;
+                           
+                        }
+                    }
+                }
             }
         }
     }

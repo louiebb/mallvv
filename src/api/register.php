@@ -3,11 +3,11 @@
 
     // 引入connect.php
     include 'connect.php';
-    $regname = isset($_POST['regname'])?$_POST['regname']:null;
+    $regaccount = isset($_POST['regaccount'])?$_POST['regaccount']:null;
     $regpwd = isset($_POST['regpwd'])?$_POST['regpwd']:null;
 
     //数据库脚本
-    $sql = "insert into tuser(username,password) values('$regname','$regpwd')";
+    $sql = "insert into t_user(account,password) values('$regaccount','$regpwd')";
     //执行
     $result = $mydb->query($sql);
 

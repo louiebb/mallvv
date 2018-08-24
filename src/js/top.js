@@ -54,8 +54,7 @@ define(['jquery','common'], function($,com) {
             }else{
                 this.pageAcc.siblings('.mallvv-do').css({display:'inlineBlock'});
             }
-            console.log(this.currentAcc );
-            
+
             //更改属性值
             this.pubmallvvlog.prop('src',this.path+'/img/top/05174866977471586.png');
             let self = this;
@@ -70,7 +69,9 @@ define(['jquery','common'], function($,com) {
             this.pubnavsecond.on('mouseleave',function(){
                 self.pubnavsecond.css('display','none');            
             })
-    
+            this.pubnavsecond.on('mouseenter',function(){
+                self.pubnavsecond.css('display','block');            
+            })
             //初始化
             this.initProvince(this);
             this.initPubNav(this);

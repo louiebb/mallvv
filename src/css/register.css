@@ -2,6 +2,12 @@
 
 .mallv-register { height: 586px; }
 
+.errortip, .warptip { position: absolute; top: 46px; left: 10px; }
+
+.errortip { color: red; }
+
+.warptip { color: #d2d622; }
+
 .reg-nav, .reg-nav li { border-bottom: 2px solid #ccc; }
 
 .reg-nav { position: relative; padding-left: 190px; }
@@ -22,7 +28,7 @@
 
 .reg-main .warp.last { width: 242px; }
 
-.reg-main .warp.btnreg { cursor: pointer; float: right; background: #FFA500; width: 148px; height: 47px; color: #fff; border-radius: 5px; border: 0; }
+.reg-main .warp.btncode { cursor: pointer; float: right; background: #FFA500; width: 148px; height: 47px; color: #fff; border-radius: 5px; border: 0; }
 
 .reg-main .warp span { float: left; width: 50px; height: 26px; text-align: center; border-right: 1px solid #ccc; }
 
@@ -40,6 +46,8 @@
 
 .reg-main .reademe a { color: #58C2ED; }
 
-.reg-main .reademe label[for=agree] { display: inline-block; width: 15px; height: 15px; position: absolute; top: 26px; left: 0; border: 1px solid #ccc; border-radius: 50%; }
+.reg-main .reademe label[for=agree] { display: inline-block; width: 15px; height: 15px; position: absolute; top: 28px; left: 0; border: 1px solid #ccc; border-radius: 50%; }
+
+.reg-main .reademe label[for=agree].active { background: url(../img/common/accept-icon.png) no-repeat center; }
 
 .reg-main .btnnext { cursor: pointer; float: left; background: #FFA500; width: 400px; height: 50px; text-align: center; line-height: 50px; color: #fff; font-size: 15px; border-radius: 5px; }

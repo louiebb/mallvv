@@ -13,7 +13,7 @@ require(['config'],function(){
                     });
                 }else if(page=='reg'){
                     this.box.load('../html/register.html',function(){
-                        // reg.init();
+                        reg.init();
                     });
                 }
             }

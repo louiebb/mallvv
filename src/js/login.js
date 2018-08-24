@@ -20,7 +20,7 @@ define(['jquery','common'],function($,com){
             this.conrcon = $(this.conrcon);
 
 
-
+            //验证码
             this.vvcode.html(this.code = com.code.enCode());
             this.currentAcc = com.mycookie.get(this.currentAcc);
             if(this.currentAcc){

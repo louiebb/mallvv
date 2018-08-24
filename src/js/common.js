@@ -26,9 +26,8 @@ define(['jquery'],function($){
             phone(t){
                 return !/^1[3-9]\d{9}$/.test(t);
             },
-            phone(){},
-            phone(){},
-            phone(){},
+            fn(){},
+
         },
         mystyle:{
             getCss:function(ele,attr){
@@ -369,8 +368,7 @@ define(['jquery'],function($){
             this.init();
         },
         code:{
-            enCode(){
-                var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            code(str){
                 let res = '';
                 for(var i=0;i<4;i++){
                     // 获取随机索引值
@@ -379,6 +377,14 @@ define(['jquery'],function($){
                 }
                 return  res;
             },
+            enCode(){
+                var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                return this.code(str);
+            },
+            numCode(){
+                let str = '0123456789';
+                return this.code(str);
+            }
         }
     };
 

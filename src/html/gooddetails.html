@@ -118,9 +118,23 @@
                         <!-- 店铺信息 -->
                         <div class="store fr">
                             <div class="name">瑞肯橱柜为为旗舰店</div>
-                            <div class="total-pinfen"></div>
+                            <div class="total-pinfen">
+                                    <dl class="all-rate">
+                                        <dt>综合评分：</dt>
+                                        <dd>
+                                            <div class="rating"><span style="width: 100%"></span></div>
+                                            <em>5</em>分</dd>
+                                        </dl>
+                            </div>
                             <div class="pinfen">
-
+                                <div class="ncs-detail-rate">
+                                    <h5><strong>店铺动态评分</strong>与行业相比</h5>
+                                    <ul>
+                                        <li> 描述相符<span class="credit">5 分</span> <span class="equal"><i></i>持平<em>----</em></span> </li>
+                                        <li> 服务态度<span class="credit">5 分</span> <span class="equal"><i></i>持平<em>----</em></span> </li>
+                                        <li> 发货速度<span class="credit">5 分</span> <span class="equal"><i></i>持平<em>----</em></span> </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="conn">
                                 联系方式：<a href="#"><img src="../img/common/button_121.gif" alt=""></a>
@@ -256,14 +270,169 @@
                         <div class="det-main fr">
                             <div class="main-title">
                                 <ul class="title clearfix">
-                                    <li class="item shop-details">商品详情</li>
+                                    <li class="item shop-details  active">商品详情</li>
                                     <li class="item shop-assess">商品评价(<span>0</span>)</li>
                                     <li class="item shop-record">销售记录(<span>0</span>)</li>
                                     <li class="item buy-consult">购买咨询</li>
                                 </ul>
+                                <div class="store-dec same">
+                                   <div class="huohao">
+                                       <span>商家货号:</span><span>xxx</span>
+                                   </div>
+                                   <div class="barnd">
+                                        <span>品牌:</span><span>龙凤床垫</span>
+                                   </div>
+                                </div>
                             </div>
                             <div class="main-content"> 
                                 <!-- <img src="../img/shopdetails/beb/longbig.png" alt=""> -->
+                            </div>
+
+                            <div class="good-reviews">
+                                <div class="title">
+                                    商品评价
+                                </div>
+                                <div class="content clearfix ">
+                                    <div class="left fl">
+                                        <span class="percent">
+                                            <span class="num">100</span><sub>%</sub><span class="hp">好评</span>
+                                        </span>
+                                        <p>共有<span>0</span>人参与评分 </p>
+                                    </div>
+                                    <div class="center fl">
+                                        <div class="haopin">
+                                            好评<span>100</span>% <div class="progress pf fr"><span></span></div> 
+                                        </div>
+                                        <div class="zhongpin">
+                                            中评<span>0</span>% <div class="progress pf fr"><span></span></div> 
+                                        </div>
+                                        <div class="chapin">
+                                            差评<span>0</span>% <div class="progress pf fr"><span></span></div> 
+                                        </div>
+                                    </div>
+                                    <div class="right fr">
+                                        <p>您可对已购买的商品进行评价</p>
+                                        <button>评价商品</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <div class="main-title">
+                                    <ul class="title clearfix">
+                                        <li class="item total-reviews active">商品评价(<span>0</span>)</li>
+                                        <li class="item hao-reviews">好评(<span>0</span>)</li>
+                                        <li class="item zhong-reviews">中评(<span>0</span>)</li>
+                                        <li class="item cha-reviews">差评(<span>0</span>)</li>
+                                    </ul>
+                                    <div class="same content">
+                                        <p class="tip-none">暂无符合条件的数据记录</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="salesRecord">
+                                <div class="title">销售记录</div>
+                                <ul class="content">
+                                    <li>
+                                        <span class="price fl">
+                                            <em>商&nbsp;城&nbsp;价</em>
+                                            <span >10790.00</span>
+                                            <em>&nbsp;元</em>
+                                        </span>
+                                        <span class="tip fl">购买的价格不同可能是由于店铺往期促销活动引起的，详情可以咨询卖家</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slaeView">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt10">
+                                    <thead>
+                                    <tr>
+                                        <th class="w200">买家</th>
+                                        <th class="w100">购买价</th>
+                                        <th class="">购买数量</th>
+                                        <th class="w200">购买时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="10" class="ncs-norecord none-tip">暂无符合条件的数据记录</td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                            <div class="ncs-consult">
+                                    <div class="ncs-goods-title-bar hd">
+                                      <h4><a href="javascript:void(0);">购买咨询</a></h4>
+                                    </div>
+                                    <div class="ncs-goods-info-content bd" id="ncGuestbook">
+                                      <!-- 咨询留言内容部分 -->
+                                      <div id="consulting_demo" class="ncs-loading">
+                            
+                            <div class="top" style="overflow: hidden;">
+                              <div class="ncs-cosult-tips"> <i></i>
+                                <p>因厂家更改商品包装、场地、附配件等不做提前通知，且每位咨询者购买、提问时间等不同。为此，客服给到的回复仅对提问者3天内有效，其他网友仅供参考！给您带来的不变还请谅解，谢谢！</p>
+                              </div>
+                              <div class="ncs-cosult-askbtn"><a href="#" target="_blank" class="ncs-btn ncs-btn-red">我要提问</a></div>
+                            </div>
+                            <div class="ncs-goods-title-nav">
+                              <ul id="consulting_tab">
+                                <li class="current"><a href="#">全部</a></li>
+                                        <li class=""><a href="#">商品咨询</a></li>
+                                    <li class=""><a href="#">支付问题</a></li>
+                                    <li class=""><a href="#">发票及保修</a></li>
+                                    <li class=""><a href="#">促销及赠品</a></li>
+                                      </ul>
+                            </div>
+                            <div class="ncs-cosult-main">
+                                <div class="ncs-norecord">还没有咨询内容</div>
+                                
+                            </div>
+                            </div>
+                                    </div>
+                            </div>
+                            <div class="ncs-recommend clearfix  ">
+                                    <div class="title">
+                                      <h4>推荐商品</h4>
+                                    </div>
+                                    <div class="content">
+                                      <ul>
+                                                                <li>
+                                          <dl>
+                                            <dt class="goods-name"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服">龙凤床垫 3E椰棕硬床垫 正反二用 富豪家族系列 乐轩 1500*1900mm<em>同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服</em></a></dt>
+                                            <dd class="goods-pic"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服"><img src="http://www.mallvv.com/data/upload/shop/store/goods/5507/5507_05251897865769185_240.jpg" alt="龙凤床垫 3E椰棕硬床垫 正反二用 富豪家族系列 乐轩 1500*1900mm"></a></dd>
+                                            <dd class="goods-price">¥3260.00</dd>
+                                          </dl>
+                                        </li>
+                                                                            <li>
+                                          <dl>
+                                            <dt class="goods-name"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服">龙凤床垫 高回弹 加厚纯椰棕 弹簧床垫 席梦思 富豪家族系列 舒轩 1800*2000mm<em>同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服</em></a></dt>
+                                            <dd class="goods-pic"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服"><img src="http://www.mallvv.com/data/upload/shop/store/goods/5507/5507_05251897036626798_240.jpg" alt="龙凤床垫 高回弹 加厚纯椰棕 弹簧床垫 席梦思 富豪家族系列 舒轩 1800*2000mm"></a></dd>
+                                            <dd class="goods-price">¥4590.00</dd>
+                                          </dl>
+                                        </li>
+                                                                            <li>
+                                          <dl>
+                                            <dt class="goods-name"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服">龙凤床垫  棕垫环保棕 自然之家系列 棉舒 1500*1900mm<em>同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服</em></a></dt>
+                                            <dd class="goods-pic"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服"><img src="http://www.mallvv.com/data/upload/shop/store/goods/5507/5507_05251896720180431_240.jpg" alt="龙凤床垫  棕垫环保棕 自然之家系列 棉舒 1500*1900mm"></a></dd>
+                                            <dd class="goods-price">¥2790.00</dd>
+                                          </dl>
+                                        </li>
+                                                                            <li>
+                                          <dl>
+                                            <dt class="goods-name"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服">龙凤床垫 高品质加厚静音独立弹簧 富豪家族系列 品轩 1800*2000mm<em>同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服</em></a></dt>
+                                            <dd class="goods-pic"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服"><img src="http://www.mallvv.com/data/upload/shop/store/goods/5507/5507_05251896271939872_240.jpg" alt="龙凤床垫 高品质加厚静音独立弹簧 富豪家族系列 品轩 1800*2000mm"></a></dd>
+                                            <dd class="goods-price">¥4180.00</dd>
+                                          </dl>
+                                        </li>
+                                                                            <li>
+                                          <dl>
+                                            <dt class="goods-name"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服">龙凤床垫 高回弹 加厚纯椰棕 弹簧床垫 席梦思 富豪家族系列 舒轩 1500*1900mm<em>同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服</em></a></dt>
+                                            <dd class="goods-pic"><a href="#" target="_blank" title="同城配送+步梯≤6楼免费搬楼（电梯入户免费搬楼）+安装（拆包/拼接等），具体运费请询问客服"><img src="http://www.mallvv.com/data/upload/shop/store/goods/5507/5507_05251897036626798_240.jpg" alt="龙凤床垫 高回弹 加厚纯椰棕 弹簧床垫 席梦思 富豪家族系列 舒轩 1500*1900mm"></a></dd>
+                                            <dd class="goods-price">¥4090.00</dd>
+                                          </dl>
+                                        </li>
+                                                              </ul>
+                                      <div class="clear"></div>
+                                    </div>
                             </div>
                         </div>
                     </div>

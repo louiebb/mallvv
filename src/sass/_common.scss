@@ -60,3 +60,51 @@
     transition: all .3s ease;
     transform-origin: 50% 30%;
 }
+
+%mallvvLis{
+    li{
+        position: relative;
+        // margin-top: 7px;
+        float: left;
+        padding: 12px 15px 7px 12px;
+        background: #F5F5F5;
+        border-right: 1px solid #ccc; 
+        &.active{
+            border-left: 1px solid #E6E6E6;
+            top: -5px;
+            padding-top: 16px;
+            padding-left: 11px;
+            margin-left: -1px;
+            background: #fff;
+            margin-bottom: -9px;
+            border-top: 2px solid $highcolor;
+        }
+    }
+}
+
+%mallvvTop{
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 15px;
+    line-height: 30px;
+    background: #FCFCFC;
+    border-top: 2px solid #FFA500;
+}
+%mallvvNoneTip{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+%mallvvABTN{
+    font: normal 14px/20px "Microsoft Yahei";
+    color: #777;
+    background-color: #F5F5F5;
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    padding: 4px 16px;
+    border: solid 1px;
+    border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;
+    cursor: pointer;
+}

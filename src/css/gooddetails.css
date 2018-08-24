@@ -1,5 +1,15 @@
 @charset "UTF-8";
-.gooddetails-main .details-top .store, .gooddetails-main .details-top .store .name, .gooddetails-main .details-top .store .total-pinfen, .gooddetails-main .details-bottom .det-sidebar .store-name, .gooddetails-main .details-bottom .det-sidebar .shop-type, .gooddetails-main .details-bottom .det-sidebar .store-search, .gooddetails-main .details-bottom .det-sidebar .store-search .searchtext, .gooddetails-main .details-bottom .det-sidebar .store-search .searchbtn, .gooddetails-main .details-bottom .det-sidebar .allshop, .gooddetails-main .details-bottom .det-sidebar .sort-shop, .gooddetails-main .details-bottom .det-sidebar .sort-shop .type span, .gooddetails-main .details-bottom .det-sidebar .sort-shop .content li span.img, .gooddetails-main .details-bottom .det-main .main-title .title { border: 1px solid #E6E6E6; }
+.gooddetails-main .details-bottom .det-main .main-title .title li { position: relative; float: left; padding: 12px 15px 7px 12px; background: #F5F5F5; border-right: 1px solid #ccc; }
+
+.gooddetails-main .details-bottom .det-main .main-title .title li.active { border-left: 1px solid #E6E6E6; top: -5px; padding-top: 16px; padding-left: 11px; margin-left: -1px; background: #fff; margin-bottom: -9px; border-top: 2px solid #FFA500; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .title, .gooddetails-main .details-bottom .det-main .salesRecord .title { height: 30px; border-bottom: 1px solid #ccc; padding-left: 15px; line-height: 30px; background: #FCFCFC; border-top: 2px solid #FFA500; }
+
+.gooddetails-main .details-bottom .det-main .reviews .content .tip-none { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.gooddetails-main .details-bottom .det-main a.ncs-btn { font: normal 14px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; display: inline-block; height: 20px; padding: 4px 16px; border: solid 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer; }
+
+.gooddetails-main .details-top .store, .gooddetails-main .details-top .store .name, .gooddetails-main .details-top .store .total-pinfen, .gooddetails-main .details-bottom .det-sidebar .store-name, .gooddetails-main .details-bottom .det-sidebar .shop-type, .gooddetails-main .details-bottom .det-sidebar .store-search, .gooddetails-main .details-bottom .det-sidebar .store-search .searchtext, .gooddetails-main .details-bottom .det-sidebar .store-search .searchbtn, .gooddetails-main .details-bottom .det-sidebar .allshop, .gooddetails-main .details-bottom .det-sidebar .sort-shop, .gooddetails-main .details-bottom .det-sidebar .sort-shop .type span, .gooddetails-main .details-bottom .det-sidebar .sort-shop .content li span.img, .gooddetails-main .details-bottom .det-main .main-title .title, .gooddetails-main .details-bottom .det-main .good-reviews, .gooddetails-main .details-bottom .det-main .good-reviews .content .right button, .gooddetails-main .details-bottom .det-main .reviews, .gooddetails-main .details-bottom .det-main .salesRecord { border: 1px solid #E6E6E6; }
 
 .gooddetails-main .details-top { height: 526px; margin-bottom: 10px; }
 
@@ -103,7 +113,35 @@
 
 .gooddetails-main .details-top .store .total-pinfen { border-top: 0; height: 35px; }
 
+.gooddetails-main .details-top .store .total-pinfen dl { font-size: 0; display: block; padding: 6px 0; }
+
+.gooddetails-main .details-top .store .total-pinfen dl .rating { background: url(../img/common/2014grate.png) no-repeat 0 -18px; vertical-align: middle; display: inline-block; *display: inline; width: 79px; height: 17px; *zoom: 1; }
+
+.gooddetails-main .details-top .store .total-pinfen dl .rating span { background: url(../img/common/2014grate.png) no-repeat 100% 0; display: block; height: 18px; }
+
+.gooddetails-main .details-top .store .total-pinfen dl dt { font-size: 12px; color: #666; vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: right; display: inline-block; *display: inline; width: 68px; *zoom: 1; }
+
+.gooddetails-main .details-top .store .total-pinfen dl dd { font-size: 12px; color: #333; vertical-align: top; letter-spacing: normal; word-spacing: normal; white-space: nowrap; text-overflow: ellipsis; display: inline-block; *display: inline; width: 130px; *width: 125px; overflow: hidden; zoom: 1; }
+
+.gooddetails-main .details-top .store .total-pinfen dl dd em { color: #ffa500; font-weight: 600; vertical-align: middle; margin-right: 2px; }
+
 .gooddetails-main .details-top .store .pinfen { padding: 0 8px; height: 108px; border-bottom: 1px dotted #ccc; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate { color: #999; width: 182px; padding: 5px; margin: 0 auto; border-bottom: dotted 1px #E6E6E6; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate h5 { color: #777; margin-bottom: 4px; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate h5 strong { font-weight: 700; margin-right: 30px; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate li { padding: 2px 0; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate .credit { color: #555; display: inline-block; width: 35px; margin-left: 4px; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate .equal { color: #ffa500; display: inline-block; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate .equal i { background: url(../img/common/2014grate.png) no-repeat -18px -40px; vertical-align: middle; display: inline-block; width: 9px; height: 8px; margin-right: 4px; }
+
+.gooddetails-main .details-top .store .pinfen .ncs-detail-rate .equal em { color: #FFF; background-color: #ffa500; text-align: center; display: inline-block; width: 40px; margin-left: 2px; }
 
 .gooddetails-main .details-top .store .conn { height: 36px; line-height: 36px; padding-left: 9px; }
 
@@ -116,6 +154,12 @@
 .gooddetails-main .details-top .store .messenger dd { vertical-align: text-top; font-size: 12px; color: #333; text-overflow: ellipsis; display: inline-block; width: 130px; overflow: hidden; zoom: 1; }
 
 .gooddetails-main .details-top .store .messenger dd span { line-height: 32px; margin-left: 5px; display: inline-block; background: url(../img/common/legend.png) no-repeat; width: 16px; height: 16px; background-position: 0 -210px; }
+
+.gooddetails-main .details-top .store .messenger dd #certMaterzhping { background-position: 0 -130px; }
+
+.gooddetails-main .details-top .store .messenger dd #certMatertuihuo { background-position: 0 -90px; }
+
+.gooddetails-main .details-top .store .messenger dd #certMaterxiaoxie { background-position: 0 -389px; }
 
 .gooddetails-main .details-top .store .conphone { height: 32px; line-height: 32px; padding-left: 9px; }
 
@@ -161,9 +205,9 @@
 
 .gooddetails-main .details-bottom .det-sidebar .sort-shop .content li span.img img { width: 40px; height: 40px; }
 
-.gooddetails-main .details-bottom .det-sidebar .sort-shop .content li .shop { display: inline-block; }
+.gooddetails-main .details-bottom .det-sidebar .sort-shop .content li .shop { display: inline-block; width: 122px; }
 
-.gooddetails-main .details-bottom .det-sidebar .sort-shop .content li .shop a { font-size: 12px; display: inline-block; overflow: hidden; width: 120px; white-space: nowrap; text-overflow: ellipsis; float: left; }
+.gooddetails-main .details-bottom .det-sidebar .sort-shop .content li .shop a { font-size: 12px; overflow: hidden; width: 120px; white-space: nowrap; text-overflow: ellipsis; float: left; }
 
 .gooddetails-main .details-bottom .det-sidebar .sort-shop .content li .shop .price { background: url(../img/common/public.png) no-repeat 0 -80px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 110px; display: block; padding-left: 10px; line-height: 16px; }
 
@@ -173,10 +217,118 @@
 
 .gooddetails-main .details-bottom .det-sidebar .sort-shop .search-btn-other { height: 40px; line-height: 40px; width: 130px; text-align: center; margin: 0 auto; background: #FEF4B1; display: block; border-radius: 5px; margin-bottom: 10px; }
 
-.gooddetails-main .details-bottom .det-main { width: 980px; background: #ccc; height: 1000px; }
+.gooddetails-main .details-bottom .det-main { width: 980px; }
 
-.gooddetails-main .details-bottom .det-main .main-title { height: 83px; margin-top: 7px; background: #34f; margin-bottom: 10px; }
+.gooddetails-main .details-bottom .det-main .main-title { height: 90px; margin-bottom: 10px; position: relative; }
 
-.gooddetails-main .details-bottom .det-main .main-title .title li { float: left; padding: 12px 15px 7px 12px; background: #F5F5F5; border-right: 1px solid #ccc; }
+.gooddetails-main .details-bottom .det-main .main-title .title { background: #FCFCFC; position: relative; }
+
+.gooddetails-main .details-bottom .det-main .same div { margin: 12px; float: left; line-height: 12px; width: 212px; }
 
 .gooddetails-main .details-bottom .det-main .main-content img { display: block; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews { width: 980px; border-top: 0; margin-bottom: 10px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content { padding-top: 20px; padding-left: 28px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content > div { height: 100px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .left { width: 168px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .left .percent { color: #FFA500; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .left .percent .num { font-size: 30px; line-height: 0; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .left .percent .hp { margin-left: 5px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .left p { margin-top: 9px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .center { margin-top: 2px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .center > div { width: 180px; height: 15px; line-height: 15px; margin-bottom: 5px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .center .pf { height: 15px; width: 100px; background: #eee; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .center .pf span { display: inline-block; width: 15px; height: 15px; background: #FFA500; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .right { width: 209px; height: 62px; border-left: 1px dotted #ccc; padding-left: 30px; }
+
+.gooddetails-main .details-bottom .det-main .good-reviews .content .right button { width: 106px; height: 28px; background: #FFA500; color: #fff; cursor: pointer; }
+
+.gooddetails-main .details-bottom .det-main .reviews { position: relative; min-height: 152px; border-top: 0; }
+
+.gooddetails-main .details-bottom .det-main .reviews .title { margin-left: -1px; border-right: 0; }
+
+.gooddetails-main .details-bottom .det-main .reviews .content { position: relative; min-height: 120px; }
+
+.gooddetails-main .details-bottom .det-main .salesRecord { border-top: 0; margin-top: 20px; }
+
+.gooddetails-main .details-bottom .det-main .salesRecord .content li { min-height: 40px; line-height: 40px; padding-left: 10px; }
+
+.gooddetails-main .details-bottom .det-main .salesRecord .content li .price span { font-weight: bold; color: #FFA500; }
+
+.gooddetails-main .details-bottom .det-main .salesRecord .content li .tip { margin-left: 20px; width: 385px; height: 17px; line-height: 17px; margin-top: 11px; background: #C8C8C8; color: #fff; }
+
+.gooddetails-main .details-bottom .det-main .slaeView thead th { font-weight: 600; text-align: center; padding: 8px 0; border-bottom: solid 2px #E7E7E7; }
+
+.gooddetails-main .details-bottom .det-main .slaeView thead th .w200 { width: 200px; }
+
+.gooddetails-main .details-bottom .det-main .slaeView thead th .w100 { width: 100px; }
+
+.gooddetails-main .details-bottom .det-main .slaeView tbody { position: relative; }
+
+.gooddetails-main .details-bottom .det-main .slaeView .none-tip { color: #999; text-align: center; height: 70px; line-height: 70px; padding: 15px 0; background-color: #FFF; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-bar { background-color: #FCFCFC; border-style: solid; border-color: #ffa500 #D7D7D7 #F5F5F5 #D7D7D7; border-width: 2px 1px 1px 1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-bar h4 { font: normal 14px/20px "Microsoft Yahei"; text-decoration: none; color: #777; display: block; padding: 6px 15px 5px 15px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-info-content { padding-bottom: 23px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-info-content .top { padding: 9px; margin-bottom: 20px; border: solid #D7D7D7; border-width: 0 1px 1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-tips { width: 780px; height: 65px; float: left; margin: 10px 0 5px 10px; position: relative; z-index: 1; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-tips i { background: url(../img/common/2014_ncs_public_img.png) no-repeat -80px 0; width: 147px; height: 65px; position: absolute; z-index: 1; top: 0; left: 0; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-tips p { line-height: 18px; color: #9B827D; width: 700px; height: 36px; position: absolute; z-index: 1; top: 28px; left: 64px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-askbtn { float: right; padding: 10px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-askbtn a.ncs-btn-red { background-color: #ffa500; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav { margin-top: 7px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav ul { font-size: 0; *word-spacing: -1px; background-color: #FCFCFC; border: solid #D7D7D7 1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav ul li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav ul li.current { margin: -7px 0 -1px -1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav ul li.current a { color: #333; background-color: #FFF; padding: 11px 15px 6px 15px; border-style: solid; border-color: #ffa500 #DDD transparent #DDD; border-width: 2px 1px 0 1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-goods-title-nav ul li a { font: normal 14px/20px "Microsoft Yahei"; text-decoration: none; color: #777; background-color: #F5F5F5; display: block; padding: 6px 15px 5px 15px; border-style: solid; border-color: #D7D7D7; border-width: 0 1px 0 0; }
+
+.gooddetails-main .details-bottom .det-main .ncs-cosult-main { padding: 20px 0 0 0; border: solid #D7D7D7; border-width: 0 1px 1px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-norecord { color: #999; text-align: center; height: 70px; line-height: 70px; padding: 15px 0; background-color: #FFF; border: none !important; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .title { background-color: #FFF; height: 20px; padding: 5px 10px; border-bottom: solid 2px #ffa500; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .title h4 { font: 14px/20px "Microsoft Yahei"; color: #333; margin-left: 6px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul { font-size: 0; *word-spacing: -1px; white-space: nowrap; padding: 10px 0 5px 0; margin-left: -5px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline; width: 20%; padding: 10px 0 5px 0; border-left: dotted 1px #E6E6E6; *zoom: 1; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li dl { text-align: center; width: 100%; padding-top: 120px; margin: 0px auto; position: relative; z-index: 1; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li .goods-name { line-height: 18px; white-space: pre-wrap; height: 36px; width: 90%; overflow: hidden; margin: 8px auto; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li .goods-pic { background: #FFF; width: 120px; height: 120px; margin-left: -60px; position: absolute; top: 0px; left: 50%; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li .goods-pic a img { max-width: 120px; max-height: 120px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li .goods-price { font-weight: 600; color: #ffa500; height: 20px; }
+
+.gooddetails-main .details-bottom .det-main .ncs-recommend .content ul li .goods-price a { background-color: #FFF; text-align: center; vertical-align: middle; display: table-cell; *display: block; width: 120px; height: 120px; overflow: hidden; }

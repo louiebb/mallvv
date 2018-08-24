@@ -4,6 +4,20 @@
     height: 586px;
 }
 
+%mallvvtip{
+    position: absolute;
+    top: 46px;
+    left: 10px;
+}
+.errortip{
+    @extend %mallvvtip;
+    color: red;
+}
+.warptip{
+    @extend %mallvvtip;
+    color: #d2d622;
+}
+
 %borbot {
     border-bottom: 2px solid #ccc;
 }
@@ -62,7 +76,7 @@
         &.last{
             width: 242px;
         }
-        &.btnreg{
+        &.btncode{
             cursor:pointer;
             float: right;
             background: $highcolor;
@@ -125,12 +139,14 @@
             display: inline-block;
             width: 15px;
             height: 15px;
-            // background: url(../img/common/accept-icon.png) no-repeat center;
             position: absolute;
-            top: 26px;
+            top: 28px;
             left: 0;
             border: 1px solid #ccc;
             border-radius: 50%;
+            &.active{
+                background: url(../img/common/accept-icon.png) no-repeat center;
+            }
         }
     }
     .btnnext{

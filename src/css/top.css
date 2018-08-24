@@ -178,7 +178,7 @@
 
 .pub-header-bottom .container .pub-nav .pub-nav-first li a:hover { color: #FFA500; }
 
-.pub-header-bottom .container .pub-nav .pub-nav-second { display: none; position: absolute; left: 0; top: 36px; z-index: 999; overflow: hidden; width: 988px; padding: 10px 0; border-top: 2px solid #000; background: #fff; }
+.pub-header-bottom .container .pub-nav .pub-nav-second { display: none; position: absolute; left: 0; top: 37px; z-index: 999; overflow: hidden; width: 988px; padding: 10px 0; border-top: 2px solid #000; background: #fff; }
 
 .pub-header-bottom .container .pub-nav .pub-nav-second .col-blcok .pub-nav-wrap { float: left; width: 300px; margin: 0 10px; overflow: hidden; }
 
