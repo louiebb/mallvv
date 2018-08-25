@@ -9,8 +9,14 @@
         case 'one':
         $sql = "select * from t_type_one";
         break;
+        case 'onetab':
+        $sql = "select * from t_type_one where isnav = 1";
+        break;
         case 'two':
         $sql = "select  * from t_type_two where parent = $id";
+        break;
+        case 'three':
+        $sql = "select  * from t_type_three where parent = $id";
         break;
         case 'bubmat':
         $sql = "select * from t_bubmat";

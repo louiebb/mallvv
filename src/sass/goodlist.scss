@@ -25,11 +25,27 @@
         // background: #f5c;
         min-height: 206px;
         padding-left: 10px;
+        //lgz :promise 问题
+        ul{
+            display: none;
+            
+        }
+
         li{
             padding-left: 15px;
             ul{
                 margin-left: 20px;
             }
+
+            a{
+                &.active{
+                    color: $highcolor;
+                }
+                &:hover{
+                    color: $highcolor;
+                }
+            }
+
         }
         i{
             display: inline-block;
@@ -210,9 +226,7 @@
         }
     }
     .current-goodlist{
-        height: 1012px;
         width: 1000px;
-        background: #1de;
         position: relative;
         li{
             position: relative;

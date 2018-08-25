@@ -129,7 +129,7 @@ define(['jquery','common'], function($,com) {
                 com.myajax.prom(self.path+'api/getdata.php?type=one','',function(x){
                         let  content =x.map(j=>{
                         return `<div class="pub-menu-list">
-                        <div><a href="${j.url}">${j.title}</a></div>
+                        <div><a href="${j.url}">${j.name}</a></div>
                         <ul class="clearfix" data-id="${j.type}">
                         </ul></div>`;
                     }).join('');
@@ -137,7 +137,7 @@ define(['jquery','common'], function($,com) {
                         let  $uls = self.pubrecmenu.children().children('ul');
                         $uls.each(function(x,y){
                             com.myajax.prom(self.path+'api/getdata.php?type=two&id='+y.dataset.id,'',function(k){
-                                let content = k.map(z=>`<li><a data-id="${z.type}" href="${z.url}">${z.val}</a></li>`).join('');
+                                let content = k.map(z=>`<li><a data-id="${z.type}" href="${z.url}">${z.name}</a></li>`).join('');
                                 $(y).html(content);
                             });
                         });

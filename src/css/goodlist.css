@@ -10,9 +10,15 @@
 
 .main-left .type-content { margin-bottom: 10px; min-height: 206px; padding-left: 10px; }
 
+.main-left .type-content ul { display: none; }
+
 .main-left .type-content li { padding-left: 15px; }
 
 .main-left .type-content li ul { margin-left: 20px; }
+
+.main-left .type-content li a.active { color: #FFA500; }
+
+.main-left .type-content li a:hover { color: #FFA500; }
 
 .main-left .type-content i { display: inline-block; width: 10px; height: 10px; margin-right: 5px; border: 1px solid #ccc; background: url(../img/common/2014shop_background_img.png) no-repeat; }
 
@@ -82,7 +88,7 @@
 
 .main-right .sort-type .page.none { color: #AAAAAA; background: #FAFAFA; }
 
-.main-right .current-goodlist { height: 1012px; width: 1000px; background: #1de; position: relative; }
+.main-right .current-goodlist { width: 1000px; position: relative; }
 
 .main-right .current-goodlist li { position: relative; float: left; margin: 5px 20px 5px 0; transition: all .2s linear; }
 
