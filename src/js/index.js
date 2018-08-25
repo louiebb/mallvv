@@ -1,6 +1,6 @@
     require(['config'],function(){
         require(['jquery','common','top','bottom','bootstrap'],function($,com,vvtop,vvbott,bootstrap){
-			var indexpage = {
+			var page = {
                 header:'#pub-header',
 				footer:'#pub-footer',
                 mallvvbanner:'.mallvv-banner',
@@ -32,8 +32,10 @@
                     this.rmrpxpInit('rm');
                     //吸顶
                     this.Ceiling();
-
+                    //时间间隔
+                    this.carousel(1000);
                 },
+                //吸顶
                 Ceiling:function(){
                     let self = this;
                     let $firstfloor = self.navbar.siblings('#second-floor');
@@ -64,6 +66,10 @@
                         ele.removeClass('select').eq(i).addClass('select');
                     }
                 },
+                //小轮播时间间隔
+                carousel(num){
+                    $('.carousel-example').carousel({interval:num});
+                },
                 rmrpxpInit(type){
                     let self = this;
                     com.myajax.prom('src/api/getdata.php?type=rmrpxp&id='+type,'',function(x){
@@ -84,7 +90,7 @@
                 },  
                 headerInit(){
                     this.header.load('src/html/top.html',function(){
-                        vvtop.init('src');
+                        vvtop.init('src/');
                     });
                 },
                 footerInit(){
@@ -94,7 +100,7 @@
                 }
 			};
 			
-            indexpage.init();
+            page.init();
         })
     });
 

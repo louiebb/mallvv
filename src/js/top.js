@@ -25,7 +25,7 @@ define(['jquery','common'], function($,com) {
         currentAcc:'currentAcc',
         //节点类名
         pageAcc:'.currentAcc',
-        
+         
         init(path){
             //获取节点
             this.path = path;
@@ -42,6 +42,7 @@ define(['jquery','common'], function($,com) {
             this.pubnavfirst = $(this.pubnavfirst);
             this.colblcok = $(this.colblcok);
             this.pubnavsecond = $(this.pubnavsecond);
+            this.pubmallvvlog = $(this.pubmallvvlog);
             this.pubmallvvlog = $(this.pubmallvvlog);
             this.pageAcc = $(this.pageAcc);
             
@@ -82,7 +83,7 @@ define(['jquery','common'], function($,com) {
     
         },
         initProvince(self){
-            com.myajax.prom(self.path+'/api/getProvince.php','',function(txt){
+            com.myajax.prom(self.path+'api/getProvince.php','',function(txt){
                 var content = txt.map(x=>`<li>${x.name}</li>`);
                 self.province.html(content).on('click','li',function(e){
                     var $lis = $(this).siblings('li');
@@ -93,7 +94,7 @@ define(['jquery','common'], function($,com) {
             })
         },
         initPubNav(self){
-            com.myajax.prom(self.path+'/api/getnav.php','',function(data){
+            com.myajax.prom(self.path+'api/getnav.php','',function(data){
                 let content = data.map(x=>`
                             <dd class="${x.more} pub-${x.pubclass}">
                             <div data-id="${x.id}">
@@ -111,7 +112,7 @@ define(['jquery','common'], function($,com) {
         },
         initnavVal(navid,ele){
             let self = this;
-            com.myajax.prom(this.path+'/api/getnavValue.php?id='+navid,'',function(data){
+            com.myajax.prom(this.path+'api/getnavValue.php?id='+navid,'',function(data){
                 let content ;
                 if(data.length && data[0].navid !=5){
                     content =data.map(x=>`<li><a href="${x.url}">${x.value}<a/></li>`).join('');
@@ -125,27 +126,38 @@ define(['jquery','common'], function($,com) {
         },
         initRecommend(){
                 let self = this;
-                com.myajax.prom(self.path+'/api/getdata.php?type=rec','',function(x){
+                com.myajax.prom(self.path+'api/getdata.php?type=one','',function(x){
                         let  content =x.map(j=>{
                         return `<div class="pub-menu-list">
                         <div><a href="${j.url}">${j.title}</a></div>
-                        <ul class="clearfix" data-id="${j.id}">
+                        <ul class="clearfix" data-id="${j.type}">
                         </ul></div>`;
                     }).join('');
                         self.pubrecmenu.html(content);
                         let  $uls = self.pubrecmenu.children().children('ul');
                         $uls.each(function(x,y){
-                            com.myajax.prom(self.path+'/api/getdata.php?type=recval&id='+y.dataset.id,'',function(k){
-                                let content = k.map(z=>`<li><a href="${z.url}">${z.val}</a></li>`).join('');
+                            com.myajax.prom(self.path+'api/getdata.php?type=two&id='+y.dataset.id,'',function(k){
+                                let content = k.map(z=>`<li><a data-id="${z.type}" href="${z.url}">${z.val}</a></li>`).join('');
                                 $(y).html(content);
                             });
                         });
                 });
-            
+
+                //是否隐藏
+                if(location.pathname.indexOf('index.html')>=0){
+                    self.pubrecmenu.css({display:'block'});
+                }else{
+                    self.pubrecmenu.css({display:'none'}).mouseenter(()=>
+                        self.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                        self.pubrecmenu.css({display:'none'}));
+                    self.pubrecmenu.siblings('span').mouseenter(()=>
+                        self.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                        self.pubrecmenu.css({display:'none'}));
+                }
         },
         initSecondNav(tab){
             let self = this;
-            com.myajax.prom(self.path+'/api/getdata.php?type='+tab,'',function(data){
+            com.myajax.prom(self.path+'api/getdata.php?type='+tab,'',function(data){
                     let content = ``;
                     data.forEach(x=>{
                     content += `<div class="pub-nav-wrap" style="display: block;">

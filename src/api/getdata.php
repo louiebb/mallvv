@@ -6,11 +6,11 @@
     $id = isset($_GET['id'])?$_GET['id']:null;
     $sql = 'select * from t_test';
     switch($type){
-        case 'rec':
-        $sql = "select id,title,url from t_recomm";
+        case 'one':
+        $sql = "select * from t_type_one";
         break;
-        case 'recval':
-        $sql = "select  * from t_recomm_val where rec_id = $id";
+        case 'two':
+        $sql = "select  * from t_type_two where parent = $id";
         break;
         case 'bubmat':
         $sql = "select * from t_bubmat";
@@ -24,6 +24,7 @@
         default:
         break;
     }
+    // var_dump($sql);
     $res = $mydb->getdata($sql);
     $data =  json_encode($res,JSON_UNESCAPED_UNICODE);
     echo $data;  

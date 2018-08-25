@@ -7,6 +7,8 @@ img { cursor: pointer; }
 
 .main .mallvv-banner { max-width: 1920px; width: 100%; overflow: hidden; background: #fff; }
 
+.main .mallvv-banner img { height: 400px; }
+
 .main .mallvv-carousel img { display: block; width: 1349px; height: 400px; }
 
 .main .mallvv-carousel { position: relative; width: 810px; height: 320px; overflow: hidden; }
@@ -125,7 +127,7 @@ img { cursor: pointer; }
 
 .main .container .ind-third-part .one-floor .floor-content { overflow: hidden; }
 
-.main .container .ind-third-part .one-floor .floor-content .left { display: block; float: left; box-sizing: border-box; overflow: hidden; width: 220px; *width: 218px; height: 500px; border-left: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; }
+.main .container .ind-third-part .one-floor .floor-content > .left { display: block; float: left; box-sizing: border-box; overflow: hidden; width: 220px; *width: 218px; height: 500px; border-left: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; }
 
 .main .container .ind-third-part .one-floor .floor-content .middle { float: left; width: 500px; }
 
@@ -141,9 +143,9 @@ img { cursor: pointer; }
 
 .main .container .ind-third-part .one-floor .floor-content .middle .two-ads li { float: left; overflow: hidden; box-sizing: border-box; width: 250px; *width: 249px; height: 180px; border-right: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; }
 
-.main .container .ind-third-part .one-floor .floor-content .right { float: right; overflow: hidden; width: 480px; }
+.main .container .ind-third-part .one-floor .floor-content > .right { float: right; overflow: hidden; width: 480px; }
 
-.main .container .ind-third-part .one-floor .floor-content .right li { float: left; overflow: hidden; box-sizing: border-box; width: 240px; *width: 239px; height: 250px; border-bottom: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; }
+.main .container .ind-third-part .one-floor .floor-content > .right li { float: left; overflow: hidden; box-sizing: border-box; width: 240px; *width: 239px; height: 250px; border-bottom: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; }
 
 .footer-line { border-top: 4px solid #e7e7e7; font-family: "微软雅黑"; margin-top: 20px; min-width: 1190px; padding: 0; }
 

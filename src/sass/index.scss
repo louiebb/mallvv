@@ -13,6 +13,9 @@ img{
         width: 100%;
         overflow: hidden;
         background: #fff;  
+        img{
+            height: 400px;
+        }
     }
     .mallvv-carousel img{display: block;width: 1349px;height: 400px;}
     .mallvv-carousel{position:relative;width:810px;height:320px;overflow:hidden;}
@@ -303,7 +306,7 @@ img{
                 }
                 .floor-content {
                     overflow: hidden;
-                    .left {
+                    &>.left {
                         display: block;
                         float: left;
                         box-sizing: border-box;
@@ -361,7 +364,7 @@ img{
                             }
                         }
                     }
-                    .right {
+                    &>.right {
                         float: right;
                         overflow: hidden;
                         width: 480px;
