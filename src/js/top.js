@@ -21,6 +21,7 @@ define(['jquery','common'], function($,com) {
         colblcok:'.pub-nav-second .col-blcok',
         pubnavsecond:'.pub-nav-second',
         pubmallvvlog:'.pub-mallvv-log',
+        pubrecommend:'.pub-recommend',
         //cookie名
         currentAcc:'currentAcc',
         //节点类名
@@ -39,6 +40,7 @@ define(['jquery','common'], function($,com) {
             this.follow = $(this.follow);
             this.pubtopright = $(this.pubtopright);
             this.pubrecmenu = $(this.pubrecmenu);
+            this.pubrecommend = $(this.pubrecommend);
             this.pubnavfirst = $(this.pubnavfirst);
             this.colblcok = $(this.colblcok);
             this.pubnavsecond = $(this.pubnavsecond);
@@ -69,16 +71,17 @@ define(['jquery','common'], function($,com) {
             });
             this.pubnavsecond.on('mouseleave',function(){
                 self.pubnavsecond.css('display','none');            
-            })
+            });
             this.pubnavsecond.on('mouseenter',function(){
                 self.pubnavsecond.css('display','block');            
-            })
+            });
+            
             //初始化
             this.initProvince(this);
             this.initPubNav(this);
             this.initRecommend();
 
-            //获取当前用户
+            
     
     
         },
@@ -129,7 +132,7 @@ define(['jquery','common'], function($,com) {
                 com.myajax.prom(self.path+'api/getdata.php?type=one','',function(x){
                         let  content =x.map(j=>{
                         return `<div class="pub-menu-list">
-                        <div><a href="${j.url}">${j.name}</a></div>
+                        <div><a data-id="${j.type}" href="${j.url}">${j.name}</a></div>
                         <ul class="clearfix" data-id="${j.type}">
                         </ul></div>`;
                     }).join('');
@@ -142,18 +145,20 @@ define(['jquery','common'], function($,com) {
                             });
                         });
                 });
-
+                console.log(location.pathname);
                 //是否隐藏
-                if(location.pathname.indexOf('index.html')>=0){
-                    self.pubrecmenu.css({display:'block'});
-                }else{
-                    self.pubrecmenu.css({display:'none'}).mouseenter(()=>
-                        self.pubrecmenu.css({display:'block'})).mouseleave(()=>
-                        self.pubrecmenu.css({display:'none'}));
-                    self.pubrecmenu.siblings('span').mouseenter(()=>
-                        self.pubrecmenu.css({display:'block'})).mouseleave(()=>
-                        self.pubrecmenu.css({display:'none'}));
-                }
+                // if(location.pathname.indexOf('index.html')>=0){
+                //     self.pubrecmenu.css({display:'block'});
+                // }else if(location.pathname.lastIndexOf('\/')>=0){
+                //     self.pubrecmenu.css({display:'block'});
+                // } else{
+                //     self.pubrecmenu.css({display:'none'}).mouseenter(()=>
+                //         self.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                //         self.pubrecmenu.css({display:'none'}));
+                //     self.pubrecmenu.siblings('span').mouseenter(()=>
+                //         self.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                //         self.pubrecmenu.css({display:'none'}));
+                // }
         },
         initSecondNav(tab){
             let self = this;

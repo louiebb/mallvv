@@ -108,15 +108,25 @@
                     background: url(../img/common/2014shop_background_img.png) no-repeat 0 -11px;
                 }
                 
-                &.asc{
-                    i{
-                        background-position: -14px -11px;
-                    }
-                }
                 &.active{
                         padding-bottom: 12px;
                         padding-top: 10px;
                         background: #fff;
+                        color: $highcolor;
+                        i{
+                            background-position: -7px -11px;
+                        }
+                        &.asc{
+                            i{
+                                background-position: -14px -11px;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    background: #fff;
+                    padding-bottom: 1px;
+                    a{
                         color: $highcolor;
                         &.desc{
                             i{
@@ -280,21 +290,43 @@
         margin: 10px auto 20px;
         font-size: 0;
         .page{
+            text-align: center;
             height: 38px;
-            width: 470px;
             margin: 0 auto;
             line-height: 38px;
-            border: 1px solid #ccc;
+            position: relative;
+            &>span:hover{
+                border-color: $highcolor;
+                background: $highcolor;
+            }
+            a{
+                position: relative;
+                padding: 11px 10px;
+                &.active{
+                    background: #ccc;
+                }
+                &:hover{
+                    padding: 12px 10px;
+                    background: $highcolor;
+                }
+            }
         }
         span{
             font-size: 12px;
             display: inline-block;
             border-right: 1px solid #ccc;
             text-align: center;
+            border: 1px solid #ccc;
+            border-right: 0;
         }
-        .num,.more{
-            width: 36px;
-        }
+        
+        // .num,.more{
+        //     a{
+        //         padding: 11px;
+        //     }
+        //     // width: 36px;
+        // }
+        
         .none,.current{
             background: #FAFAFA;
         }
@@ -303,9 +335,15 @@
         }
         .intag{
             width: 60px;
+            a{
+                padding: 11px 12px;
+            }
         }
         .endpage{
             border-right: 0;
+        }
+        .last{
+            border-right: 1px solid #ccc;            
         }
     }
     .likethink{

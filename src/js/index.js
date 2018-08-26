@@ -91,6 +91,10 @@
                 headerInit(){
                     this.header.load('src/html/top.html',function(){
                         vvtop.init('src/');
+                        vvtop.pubrecmenu.css({display:'block'});
+                            vvtop.pubrecmenu.on('click','a',function(){
+                                location.href = '../src/html/goodlist.html?currentType='+$(this).attr('data-id');
+                            });
                     });
                 },
                 footerInit(){
@@ -99,7 +103,6 @@
                     });
                 }
 			};
-			
             page.init();
         })
     });

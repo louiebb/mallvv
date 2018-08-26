@@ -8,18 +8,18 @@
 define(['jquery'],function($){
     var com = {
         mydoc:{
-            getUrlParms(url) {
-                url = decodeURI(url);
-                url = url[0] === '?' ? url.slice(1) : url;
+            getUrlParms(params) {
+                params = decodeURI(params);
+                params = params[0] === '?' ? params.slice(1) : params;
             
                 var obj = {};
-                url = url.split('&');
-                url.forEach(function(item) {
+                params = params.split('&');
+                params.forEach(function(item) {
                     var i = item.split('=');
                     obj[i[0]] = i[1];
                 });
                 return obj;
-            },
+            }
         },
         myreg:{
             //手机号

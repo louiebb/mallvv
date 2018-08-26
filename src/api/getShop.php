@@ -4,8 +4,8 @@
     include 'connect.php';
         // 获取前端传入的参数
     $type  = isset($_POST['type'])?$_POST['type']:'200';
-    $order = isset($_POST['order'])?$_POST['order']:null;
-    $field = isset($_POST['field'])?$_POST['field']:null;
+    // $order = isset($_POST['order'])?$_POST['order']:null;
+    // $field = isset($_POST['field'])?$_POST['field']:null;
 	$pageNo = isset($_POST['pageNo'])?$_POST['pageNo']:1;//避免报错
     $qty = isset($_POST['qty'])?$_POST['qty']:3;//避免报错
     // var_dump($_POST['pageNo']);
@@ -16,9 +16,10 @@
     // $sql = "select * from t_shop where type like '$type%' limit $pageNo , $qty";
     $sql = "select * from t_shop where type like '$type%'";
 
-    if($field){
-        $sql = "select * from t_shop where type like '$type%' order by $field $order";
-    }
+    //前端做数据处理 php直接返回数据即可
+    // if($field){
+    //     $sql = "select * from t_shop where type like '$type%' order by $field $order";
+    // }
     // var_dump($sql);
     $data = $mydb->getdata($sql);
 

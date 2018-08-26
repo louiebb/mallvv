@@ -44,11 +44,17 @@
 
 .main-right .sort-type dl dd a i { position: relative; right: -3px; display: inline-block; width: 7px; height: 10px; background: url(../img/common/2014shop_background_img.png) no-repeat 0 -11px; }
 
-.main-right .sort-type dl dd a.asc i { background-position: -14px -11px; }
-
 .main-right .sort-type dl dd a.active { padding-bottom: 12px; padding-top: 10px; background: #fff; color: #FFA500; }
 
-.main-right .sort-type dl dd a.active.desc i { background-position: -7px -11px; }
+.main-right .sort-type dl dd a.active i { background-position: -7px -11px; }
+
+.main-right .sort-type dl dd a.active.asc i { background-position: -14px -11px; }
+
+.main-right .sort-type dl dd:hover { background: #fff; padding-bottom: 1px; }
+
+.main-right .sort-type dl dd:hover a { color: #FFA500; }
+
+.main-right .sort-type dl dd:hover a.desc i { background-position: -7px -11px; }
 
 .main-right .sort-type p { display: inline-block; }
 
@@ -112,11 +118,17 @@
 
 .main-right .goodlist-page { margin: 10px auto 20px; font-size: 0; }
 
-.main-right .goodlist-page .page { height: 38px; width: 470px; margin: 0 auto; line-height: 38px; border: 1px solid #ccc; }
+.main-right .goodlist-page .page { text-align: center; height: 38px; margin: 0 auto; line-height: 38px; position: relative; }
 
-.main-right .goodlist-page span { font-size: 12px; display: inline-block; border-right: 1px solid #ccc; text-align: center; }
+.main-right .goodlist-page .page > span:hover { border-color: #FFA500; background: #FFA500; }
 
-.main-right .goodlist-page .num, .main-right .goodlist-page .more { width: 36px; }
+.main-right .goodlist-page .page a { position: relative; padding: 11px 10px; }
+
+.main-right .goodlist-page .page a.active { background: #ccc; }
+
+.main-right .goodlist-page .page a:hover { padding: 12px 10px; background: #FFA500; }
+
+.main-right .goodlist-page span { font-size: 12px; display: inline-block; border-right: 1px solid #ccc; text-align: center; border: 1px solid #ccc; border-right: 0; }
 
 .main-right .goodlist-page .none, .main-right .goodlist-page .current { background: #FAFAFA; }
 
@@ -124,7 +136,11 @@
 
 .main-right .goodlist-page .intag { width: 60px; }
 
+.main-right .goodlist-page .intag a { padding: 11px 12px; }
+
 .main-right .goodlist-page .endpage { border-right: 0; }
+
+.main-right .goodlist-page .last { border-right: 1px solid #ccc; }
 
 .main-right .likethink { border: 1px solid #ccc; }
 
