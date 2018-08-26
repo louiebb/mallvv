@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/top.css">
     <link rel="stylesheet" href="../css/bottom.css">
     <link rel="stylesheet" href="../css/goodlist.css">
-    <script src="../js/require.js" data-main="../js/goodlist"></script>
 </head>
 <body>
     <div id="pub-header"></div>
@@ -72,10 +71,10 @@
                     <div class="title sort-type">
                         <dl class="clearfix fl">
                             <dt>排序方式：</dt>
-                            <dd class="active">默认</dd>
-                            <dd class="active desc">销售 <i></i></dd>
-                            <dd class="active asc">人气 <i></i></dd>
-                            <dd>价格 <i></i></dd>
+                            <dd ><a class="active" href="javascript:void(0);" title="默认排序">默认</a></dd>
+                            <dd ><a class="desc" href="javascript:void(0);" title="销售">销售<i></i></a></dd>
+                            <dd ><a class="asc" href="javascript:void(0);" title="人气">人气<i></i></a></dd>
+                            <dd><a href="javascript:void(0);" title="价格">价格<i></i></a></dd>
                         </dl>
                         <p class="fl">商品所在地：</p>
                         <div class="address-select fl">
@@ -142,7 +141,7 @@
                     <ul class="current-goodlist clearfix">
                         <li>
                             <div class="item">
-                                <img src="../img/shoplist/001.jpg" alt="">
+                                <img src="../img/shoplist/100.jpg" alt="">
                                 <div class="warp">
                                     <p class="name">新中源 釉面砖客厅全抛釉瓷砖地砖地板砖墙砖金刚釉8008 800*800</p>
                                     <p class="price-warp"><em><span>¥</span><span class="price">69.00</span></em> ¥<del>276.00</del></p> 
@@ -177,5 +176,6 @@
         </div>
     </div>
     <div id="pub-footer"></div>    
+    <script src="../js/require.js" data-main="../js/goodlist"></script>
 </body>
 </html>

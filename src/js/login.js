@@ -51,7 +51,6 @@ define(['jquery','common'],function($,com){
         },
         login(){
             if(this.isok){
-                //  lgz  to do
                 this.currentAcc = {account:$.trim(this.account.val()),pwd:$.trim(this.pwd.val())}
                 com.mycookie.set('currentAcc',JSON.stringify(this.currentAcc),{expires:3});
                 location.href = '../../index.html';

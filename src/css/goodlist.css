@@ -36,17 +36,19 @@
 
 .main-right .sort-type { border: 1px solid #ccc; margin-bottom: 10px; padding-right: 6px; }
 
-.main-right .sort-type dl { margin-right: 73px; }
+.main-right .sort-type dl { position: relative; margin-right: 73px; }
 
-.main-right .sort-type dl dt, .main-right .sort-type dl dd { float: left; padding: 9px; line-height: 20px; border-right: 1px solid #ccc; }
+.main-right .sort-type dl dt, .main-right .sort-type dl dd { float: left; position: relative; border-right: 1px solid #ccc; }
 
-.main-right .sort-type dl dd i { display: inline-block; width: 7px; height: 10px; background: url(../img/common/2014shop_background_img.png) no-repeat 0 -11px; }
+.main-right .sort-type dl dd a { padding: 11px; }
 
-.main-right .sort-type dl dd.active { background: #fff; }
+.main-right .sort-type dl dd a i { position: relative; right: -3px; display: inline-block; width: 7px; height: 10px; background: url(../img/common/2014shop_background_img.png) no-repeat 0 -11px; }
 
-.main-right .sort-type dl dd.active.desc i { background-position: -7px -11px; }
+.main-right .sort-type dl dd a.asc i { background-position: -14px -11px; }
 
-.main-right .sort-type dl dd.active.asc i { background-position: -14px -11px; }
+.main-right .sort-type dl dd a.active { padding-bottom: 12px; padding-top: 10px; background: #fff; color: #FFA500; }
+
+.main-right .sort-type dl dd a.active.desc i { background-position: -7px -11px; }
 
 .main-right .sort-type p { display: inline-block; }
 

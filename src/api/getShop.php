@@ -8,6 +8,9 @@
     $field = isset($_POST['field'])?$_POST['field']:null;
 	$pageNo = isset($_POST['pageNo'])?$_POST['pageNo']:1;//避免报错
     $qty = isset($_POST['qty'])?$_POST['qty']:3;//避免报错
+    // var_dump($_POST['pageNo']);
+    // var_dump($qty);
+
 
     //limit 数据库分页  => limit 5,10 查询6到15行的数据 
     // $sql = "select * from t_shop where type like '$type%' limit $pageNo , $qty";
