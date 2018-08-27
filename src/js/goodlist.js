@@ -166,7 +166,9 @@ require(['config'],function(){
                         // <p class="stock">库存<span>${y.stock}</span></p>
                         return ` <li>
                         <div class="item">
-                            <img src="../img/shoplist/${y.img}" alt="">
+                            <a href="gooddetails.html?id=${y.id}">
+                                <img src="../img/shoplist/${y.img}" alt="">
+                            </a>
                             <div class="warp">
                                 <p class="name">${y.name}</p>
                                 <p class="price-warp"><em><span>¥</span><span class="price">${y.price}</span></em> ¥<del>${(y.price*y.discount).toFixed(2)}</del></p> 
@@ -268,6 +270,5 @@ require(['config'],function(){
             }
         }
         page.init();
-
     });
 });
