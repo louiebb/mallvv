@@ -1,14 +1,4 @@
-/*
-	对象方法插件：扩展jQuery的原型
-		* 多个调用	each()
-		* 链式调用  return this
-		* 安全使用$ 匿名函数传参
-
-		* 系列插件
- */
-
-;(function($){
-	// $.prototype === $.fn
+;define(['jquery'], function($) {
 	$.prototype.lgzzoom = function(options){
 		// 这里的this指向：实例（jquery对象）
 
@@ -23,7 +13,6 @@
 			// 大图小图间距
 			gap:15
 		}
-
 		// 实例可能存在多个
 		// 利用each实现遍历
 		this.each(function(){
@@ -100,7 +89,6 @@
 				$zoom.show();
 				// $big.show();
 				e.stopPropagation();
-				console.log('big:mouseenter');
 				$big.slideDown();
 
 
@@ -133,7 +121,7 @@
 				$zoom.hide();
 				e.stopPropagation();
 				// $big.hide();
-				console.log('big:mouseleave');
+				// console.log('big:mouseleave');
 				$big.slideUp();
 			
 			})
@@ -175,12 +163,6 @@
 		// 链式调用的关键
 		return this;
 	}
-
-	// $.fn.extend({
-	// 	lgzzoom(){},
-	// 	lgzcarousel(){},
-	// 	lgztab(){}
-	// 	....
-	// })
-})(jQuery);
+	return $;
+});
 
