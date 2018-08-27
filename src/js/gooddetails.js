@@ -1,17 +1,23 @@
 require(['config'],function(){
     require(['jquery','common','top','bottom','zoom'],function($,com,vvtop,vvbott){
         var page = {
+            header:'#pub-header',
+			footer:'#pub-footer',
             currentid:0,
             currentData:{},
             bigimage:'.image-wrap',
             goodname:'.good-name',
             goodprice:'.good-price .left',
             zoomimg:'.zoomimg',
+            maincontent:'.main-content',
             init(){
+                this.header = $(this.header);
+                this.footer = $(this.footer);
                 this.currentid = com.mydoc.getUrlParms(location.search).id;
                 this.bigimage = $(this.bigimage);
                 this.goodname = $(this.goodname);
                 this.goodprice = $(this.goodprice);
+                this.maincontent = $(this.maincontent);
 
                 let self = this;
                 //获取数据
@@ -19,6 +25,8 @@ require(['config'],function(){
                     this.currentData=x;
                     this.InitImg();
                     this.Initsummary();
+                    let content = `<img src="../img/shopdetails/beb/${this.currentData.describe}" alt="">`;
+                    this.maincontent.html(content);
                 });
                 this.bigimage.on('click',function(e){
                     console.log(e.target.className)
@@ -30,6 +38,10 @@ require(['config'],function(){
                             obj.idx = 0;
                         }
                         obj.lis.removeClass('active').eq(obj.idx).addClass('active');
+                        //移动
+                        let ul = obj.lis.closest('ul');
+                        let liW = $(obj.lis[0]).width();
+                        ul.css({left:ul.position().left-liW});
                     }else if(e.target.classList.contains('next')){
                         let obj = self.imgactive(e.target);
                         obj.idx +=1;
@@ -37,16 +49,22 @@ require(['config'],function(){
                             obj.idx=length-1;
                         }
                         obj.lis.removeClass('active').eq(obj.idx).addClass('active');
+                         //移动
+                         let ul = obj.lis.closest('ul');
+                         let liW = $(obj.lis[0]).width();
+                         ul.css({left:ul.position().left+liW});
                     }else if(e.target.className=='imglist'){
                         let $img = $(e.target);
                         $img.closest('li').addClass('active').siblings('li').removeClass('active');
                         let imgurl =  $img.attr('src');
                         let bigimgurl =  $img.attr('bimg');
                         self.zoomimg.children('img').attr({src:imgurl,'data-big':bigimgurl});
-                        // console.log();
                     }
 
                 });
+
+                this.headerInit();
+                this.footerInit();
                 
             },
             imgactive(target){
@@ -112,6 +130,25 @@ require(['config'],function(){
                 `;
                 this.goodprice.html(twocon);
 
+            },
+            headerInit(){
+                this.header.load('top.html',function(){
+                    vvtop.init('../');
+                    vvtop.pubrecmenu.css({display:'none'}).mouseenter(()=>
+                    vvtop.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                    vvtop.pubrecmenu.css({display:'none'}));
+                    vvtop.pubrecommend.mouseenter(()=>
+                    vvtop.pubrecmenu.css({display:'block'})).mouseleave(()=>
+                    vvtop.pubrecmenu.css({display:'none'}));
+                    vvtop.pubrecmenu.on('click','a',function(){
+                        location.href = './goodlist.html?currentType='+$(this).attr('data-id');
+                    });
+                });
+            },
+            footerInit(){
+                this.footer.load('bottom.html',function(){
+                    vvbott.init('../');
+                });
             }
         }
 
