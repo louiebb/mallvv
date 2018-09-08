@@ -42,5 +42,5 @@
             $this->conn()->close();
         }
     }
-    $mydb = new MYDB('localhost','root','','mallvv');
+    $mydb = new MYDB('localhost','root','root','mallvv');
 ?>
